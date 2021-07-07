@@ -1,0 +1,330 @@
+# Flash messages from controllers
+en:
+  admins:
+    # This is shown to an admin user after he has successfully sent a mass message.
+    message_sent_successfully: ""
+    # This is shown to an admin user if he tries to send a mass message and it cannot be delivered successfully to everyone.
+    message_failed_to_be_sent_for_everyone: Toplu mesaj herkese ulaştırılamadı
+  application:
+    # This is shown to the user if he tries to access a page without logging in first.
+    first_sign_in: "Lütfen önce oturum açın"
+    # This is shown to the user when his session has expired (user has been inactive for too long) and the user tries to access a page
+    session_has_expired: "Oturumunuz sona erdi. Lütfen tekrar oturum açın."
+    # Staff logins can be restricted to be allowed only from certain ip addresses. Flash error shown if ip-address does not match.
+    ip_not_on_whitelist: "Personel olarak oturum açmaya yalnızca belirli konumlardan izin verilir. Yalnızca beyaz listedeki IP adreslerinden oturum açabilirsiniz. %{ip} IP&#39;niz beyaz listede değil. Bu konumdan oturum açabilmeniz gerekiyorsa, sistem yöneticisiyle iletişime geçin."
+    # Error shown to user if they have not given all the necessary consents to use the service
+    unaccepted_required_consents: Hizmeti kullanmak için gereken tüm izinleri vermediniz. Lütfen aşağıdaki rızalarınızı gözden geçirin ve gerekli rızaları vermek için kutuyu/kutuları işaretleyin.
+    # Error shown to indicate which required consent the user has not given
+    unaccepted_required_consent: Devam etmek için bunu kabul etmeniz gerekiyor.
+  answers:
+    # This is shown to a user when he goes back to a question in a form that he has already answered, and changes the answer.
+    updated: Cevap güncellendi
+  form_answers:
+    # This message is shown to a user after he has answered all the questions in a form.
+    completed: Form tamamlandı
+    # A label in a table, this refers to the name of the person who filled a form ("Name: John Doe").
+    name: "İsim:"
+    # A label in a table, this refers to the initials of the person who filled a form ("Initials: J.D") .
+    name_letters: "Baş harfler:"
+    # A label in a table, this refers to the birthdate of the person who filled a form ("Date of birth: 01.01.1970").
+    birthday: "Doğum tarihi:"
+    # A label in a table, this refers to the date the form was filled ("Filling date: 10.10.2013")
+    filling_date: "Doldurma tarihi:"
+    # An error message that appears if the user tries to generate a pdf file from another form than QLQ30.
+    pdf_error: "Pdf dosyası yalnızca QLQ30 formundan oluşturulabilir"
+    # The username
+    person_id: Kullanıcı adı
+    # An error message that appears if the user tries to create new form answer without selecting form.
+    you_must_select_form: Doldurulacak formu seçmelisiniz.
+  clients:
+    # Message that is shown when a doctor successfully removes the patient from the list of his patients, e.g. "Patient John Doe was successfully removed from your patients"
+    client_successfully_removed: "Hasta %{client} hastalarınızdan başarıyla çıkarıldı."
+    # Message that is shown when a doctor unsuccessfully tries to remove the patient from the list of his patients, e.g. "An error occured while removing patient John Doe from your patients."
+    error_occured_while_removing_client: "Hasta %{client} kaldırılırken bir hata oluştu."
+    # Message that is shown when a doctor successfully adds the patient to the list of his patients, e.g. "Patient John Doe was successfully added to your patients. You have also been added to the conversations the patient already had with other staff."
+    client_successfully_added: "Hasta %{client} hastalarınıza başarıyla eklendi."
+    # Message that is shown when adding a patient to a doctor's patients fails, e.g. "An error occured while adding patient John Doe to your patients."
+    error_occured_while_adding_client: "Hasta %{client} eklenirken bir hata oluştu."
+    # Message shown when other staff member adds patient to other staff member.
+    client_successfully_added_to_other_staff_member: "Hasta %{staff} için başarıyla eklendi."
+    # Message shown when other staff member removes patient from other staff member.
+    client_successfully_removed_from_other_staff_member: "Hasta %{staff}&#39;dan başarıyla çıkarıldı."
+    clients_without_care_team:
+      # Message shown on a flash if there is an active patient without a care team
+      one: "Bakım ekibi olmayan aktif bir hasta var. Lütfen hasta için personel ekleyin veya durumlarını inaktif olarak değiştirin. <a href=%{link}>Hastayı göster</a>"
+      other: "Bakım ekibi olmayan %{count} aktif hasta var. Lütfen hastalar için personel ekleyin veya durumlarını inaktif olarak değiştirin. <a href=%{link}>Hastaları göster</a>"
+    activate:
+      # Text explaining that patient's email can not be blank when activating patient.
+      email_blank: Hastanın e-postası boş bırakılamaz. Aktivasyon maili hastanın mail adresine gönderilir.
+      # Message shown after patient has been succesfully been activated.
+      activated: Hasta etkinleştirildi ve aktivasyon e-postası gönderildi.
+      # Message shown after deactivation
+      deactivated: Hasta başarıyla devre dışı bırakıldı ve artık hizmete giriş yapamıyor.
+      # Visibility zones staff in the same domain can access.
+  people:
+    # Message that is shown after a user successfully updates his personal information.
+    successfully_updated: Bilgi başarıyla güncellendi
+    # Message that is shown after a new user is successfully created.
+    successfully_saved: Kullanıcı başarıyla oluşturuldu.
+    # Message that is shown after a user's password was successfully reset (new password sent to user's email).
+    reset: Şifre başarıyla sıfırlandı.
+    # Shown to Nurse/staff when they manually trigger password reset on users
+    reset_link_sent: "Kullanıcıya (%{email}) yeni bir şifre belirleme bağlantısı içeren bir e-posta gönderildi."
+    # Message that is shown if the user tries to change his password, but the user inputs his current password wrong.
+    wrong_password: Girdiğiniz mevcut şifre yanlış.
+    # Message that is shown if the user tried to set email or phone number without validating the change with current password
+    no_password: "Şifrenizi, telefon numaranızı veya e-posta adresinizi değiştirmek için mevcut şifrenizi girmeniz gerekir."
+    # Message to indicate that user shouldn't fill new password and pw confirmation fields if not changing password
+    no_need_to_input_new_pw: "Şifrenizi değiştirmek istemiyorsanız bunu ve aşağıdaki alanı boş bırakın."
+    # Part of an error message (Birthdate format was incorrect).
+    date_format_error: format yanlıştı.
+    # When person tries to change to domain for which he/she does not have access.
+    switch_domain_error: Etki alanı değiştirilirken hata oluştu. Lütfen bu sorunla ilgili olarak teknik desteğe başvurun!
+    # When a nurse tries to edit a user that was invited
+    invited_users_cannot_reset_password: "Şifre sıfırlanamıyor. Davet edilen kullanıcılar, şifreyi sıfırlayabilmek için önce kaydolmalıdır."
+    # Error message when someone tries to reset Admin's password
+    admin_password_reset_error: Yönetici için parola sıfırlamaya izin verilmez
+  sessions:
+    # The error message a user receives if he tries to log in with wrong username/password combination.
+    invalid_credentials: Geçersiz Kullanıcı Kimliği veya Şifre
+    # The error message a user, whose account has been terminated, receives when trying to log in.
+    not_active: Kullanıcı durumu sonlandırıldı
+    # The message a user receives after successfully signing out.
+    signed_out: Oturumunuz kapatıldı
+    # %{wait} is the number of seconds the user has to wait after too many consequent failed log-in attempts.
+    too_many_failed_attempts: "Birçok kez oturum açmayı başaramadınız. Tekrar giriş yapabilmek için %{wait} saniye beklemelisiniz."
+    # Shown when the user logs in from an external system, trying to maintain patient context, but the patient in question has not registered to this service yet
+    sso_client_not_registered: Hasta henüz servis davetini kabul etmemiştir.
+    send_reset:
+      # A message for when the user has tried to reset their password too many times
+      too_many_requests: Çok fazla şifre sıfırlama isteği gönderdiniz.
+      # A message for the user when they submitted the reset form without entering their username
+      user_empty: Kullanıcı adı girilmedi.
+    send_auth:
+      # A message for when the verification sms has been sent
+      sms_has_been_sent: SMS kodu gönderildi.
+      # A message for when the sending of the verification sms has failed
+      sms_has_not_been_sent: SMS kodu gönderilmedi.
+      # A message telling the user the code they entered was incorrect
+      wrong_sms_token: "Girilen SMS kodu yanlış, lütfen kodu tekrar kontrol edin."
+    auth:
+      # An error message telling the user they have clicked a password reset link with an invalid token (eg. it might be too old)
+      invalid_token: Tıkladığınız parola sıfırlama bağlantısının süresi doldu veya geçersiz. Lütfen parola sıfırlama bağlantısını yeniden gönderin.
+      # A verification code message sent to the user by sms. This must be given in YAML with the | syntax, otherwise the \n's will not be parsed correctly in the SMS.
+      sms_auth_msg: "%{product_name} doğrulama kodunuz %{code}. Şifrenizi sıfırlamak için kodu %{product_name} alanına girin."
+      technical_error: "Teknik hata"
+      invalid_login_method: "Kullanıcı hesabınızın bu giriş yöntemini kullanmasına izin verilmiyor"
+      # The person_id from 2fa doesn't match user's valid person_id
+      person_id_mismatch: "Kimlik doğrulamasından gelen sosyal güvenlik numarası, kullanıcı hesabındaki numarayla eşleşmiyor"
+      # The person_id from 2fa matches some other users person_id
+      person_id_in_use: "Sosyal güvenlik numarası zaten başka bir kullanıcıda kullanılıyor"
+      # User not found with person_id
+      not_set_up: "Kullanıcı BankID ile bulunamadı. BankID&#39;yi ilk kez kullanıyorsanız, ayarlamak için kullanıcı adı ve şifre ile giriş yapın."
+      # User is trying to authenticate with a method that's not allowed on their user account
+      method_not_supported: "Kullanıcı hesabınızın bu yöntemlerden birini kullanarak oturum açması gerekir."
+      strict_2fa: "Geçerli bir kimlik doğrulama yöntemi yok. Lütfen sağlık personelinizle iletişime geçin"
+  conversations:
+    # A message a doctor receives after adding a patient to his patients.
+    new_conversation: Hasta başarıyla hastalarınıza eklendi. Siz ve hasta arasında bir konuşma oluşturuldu. Lütfen bu konuşmaya hastanın diğer doktorlarını ve hemşirelerini ekleyin.
+    # A message a user receives after creating a new conversation without any other participants.
+    empty_new_conversation: Boş bir konuşma başarıyla oluşturuldu.
+    # %{user} is the full name of the user who was added to the conversation.
+    add_user: "%{user} görüşmeye eklendi."
+    # %{user} is the full name of the user who was removed from the conversation.
+    remove_user: "%{user} görüşmeden kaldırıldı."
+    # This is shown if an error occurs when a user tries to do something.
+    bad_request: 'Bir hata nedeniyle isteğiniz tamamlanamadı.'
+  messages:
+    # An error message
+    forbidden_attachment: Bu tür dosyaların gönderilmesi yasaktır. Güvenlik nedeniyle HTML dosyalarına izin verilmez. Diğer dosya türlerini gönderirken sorun yaşamanız durumunda lütfen teknik desteğe başvurun.
+  feedback:
+    # The message a user receives after giving feedback.
+    thank_you: Geri bildiriminiz için teşekkür ederiz!
+  reported_grades:
+    # Flash message a user sees after successfully saving an symptom grade.
+    grade_reported: Belirti verileri başarıyla bildirildi.
+    # Flash error message the user sees after saving an symptom grade fails.
+    grade_reported_error: Not kaydedilirken bir hata oluştu.
+  adverse_effects:
+    # Flash message the user sees after updating the information of an symptom.
+    updated_successfully: Belirti başarıyla güncellendi
+  values:
+    # Flash message the user sees after successfully creating a new value (e.g. lab value).
+    saved: Yeni değer başarıyla oluşturuldu
+    # Flash message the user receives after successfully changing the information of a value (e.g. lab value).
+    successfully_updated: Değer başarıyla güncellendi
+  reported_values:
+    # Flash message the user sees after successfully saving a value.
+    saved: Bildirilen değer başarıyla kaydedildi
+    # A flash error message if reporting a value fails.
+    save_error: Bir hata oluştu ve bildirilen değer kaydedilemedi.
+    # Message shown to patient after successfully saved value. Here
+    # %{reported_values} is a comma separated list of values and %{time}
+    # is a date and time
+    saved_review: "%{reported_values} %{time} konumunda kaydedildi"
+    # Button text
+    edit_button: Düzenle
+    show_button: Göstermek
+    # An extra complimentary message shown after reporting values
+    thanks_for_reporting: "Teşekkür ederim. Bu bilgiler, buna göre tepki verecek ve gerekirse sizinle iletişime geçecek olan tıbbi personelinize iletilecektir."
+    # Message shown after reporting for staff
+    thanks_for_reporting_staff: Rapor ettiğiniz için teşekkür ederiz.
+    aava_healthy_at_work_completed: >-
+      Teşekkürler, Sağlıklı İş Yerinde anketine verdiğiniz yanıtlar kaydedildi. İş sağlığı ekibi anketi gözden geçirecek ve verdiğiniz yanıtlara göre durumunuzu değerlendirecektir. Servis aracılığıyla ekipten geri bildirim alacaksınız.
+  adverse_effects_packages:
+    # Flash message after the user deletes an symptom questionaire.
+    adverse_effects_package_deleted: Paket silindi
+    # Flash message after saving an symptom questionaire fails.
+    adverse_effects_package_save_error: Paket kaydedilirken bir hata oluştu
+  follows:
+    # Flash message after a new followed item was successfully saved.
+    saved: Takip edilen öğeler başarıyla güncellendi.
+    # An error message
+    save_error: Takip edilen öğe kaydedilemedi
+  invites:
+    # Flash message after a user gives an incorrect invite key (a string consisting of random letters and numbers)
+    invalid_key: "Geçersiz anahtar. Lütfen anahtarı doğru girdiğinizi kontrol edin. Davetinizin süresi dolmuş olabilir ve yeni bir davete ihtiyacınız olabilir."
+    used_key: Davet anahtarınız zaten kullanılmış. Kullanıcı adınız ve şifrenizle giriş yapabilirsiniz.
+    # Flash message after an email invite is sent successfully.
+    sent_succesfully: Davetiye başarıyla gönderildi.
+    # Flash message after deleting an invite
+    invite_destroyed: Davet başarıyla silindi.
+    # Flash messages after deleting many invites
+    invites_destroyed: Seçilen tüm davetiyeler başarıyla silindi.
+    # Flash message after an invite has been successfully resent
+    invite_resent: Davetiye başarıyla yeniden gönderildi.
+    # Flash message after several invites have been successfully resent
+    invites_resent: Seçilen tüm davetiyeler başarıyla yeniden gönderildi.
+    # Flash message shown if no person ID was given or if the given person ID is already in use.
+    invalid_person_id: Kişi kimliği boştu veya zaten kullanılıyor. Tüm kullanıcıların benzersiz bir kişi kimliği olmalıdır.
+    # Error message
+    clients_with_email_already_exist: "Aşağıdaki e-posta adreslerine sahip hastalar zaten davet edildi: %{emails}"
+    # Flash message (success)
+    clones_created: Davetiyeler başarıyla gönderildi
+    # When a nurse tries to invite someone who already has been invited
+    email_already_invited: "%{email} e-posta adresine sahip bir davet zaten var."
+    # When a nurse tries to invite someone who already has been invited
+    person_id_already_invited: "%{pid} (e-posta: %{email}) kişisel kimlik koduna sahip bir davet zaten var."
+    # When a nurse tries to invite someone who is already a registered user
+    email_already_exists: "%{email} e-posta adresine sahip bir hasta zaten var."
+    # Error message caused by creating an item that already exists.
+    already_exists: "Davetiye zaten var. Bunun nedeni, gönder düğmesine çift tıklamak olabilir."
+    # When a nurse tries to invite someone who is already a registered user
+    person_id_already_exists: "%{pid} (e-posta: %{email}) kişisel kimlik koduna sahip bir hasta zaten var."
+    # When a nurse tries to invite someone who already exists in another domain
+    person_id_exists_different_domain: "%{pid} (email:%{email}) kişisel kimlik koduna sahip bir hasta veya davetiye zaten başka bir Etki Alanında var - %{domains}. Lütfen teknik desteğe başvurun."
+    person_email_exists_different_domain: "%{email} e-posta adresine sahip bir hasta veya davetiye zaten başka bir etki alanında var - %{domains}. Lütfen teknik desteğe başvurun."
+    # Button to resend invite
+    resend_invite: Yeniden gönderme daveti
+    # Button to edit invite
+    edit_invite: Davetiyeyi düzenle
+    # Show when user edits the invite, but hasn't changed anything
+    no_changes_made: "Davetiyede herhangi bir değişiklik yapılmadı"
+    # Shown when user changes an invite, and the invite is re-sent because email / PID has been changed
+    invite_changed_and_resent: Değişiklikler kaydedildi ve davet yeniden gönderildi
+    # Shown when user changes an invite, but it's not resent becuase changes are not significant
+    changes_made_invite_not_resent:  değişiklikler kaydedildi
+    # Shown when user changes an invite, but an error prevents completion
+    unable_to_make_changes: "Değişiklikler kaydedilemiyor."
+    # Shown appended to the unable_to_make_changes if the user has access to tech support.
+    unable_to_make_changes_support: "Lütfen destek ile iletişime geçin."
+    # Alternative message to show to the user when no direct support is available.
+    unable_to_make_changes_support_alt: "Yardıma ihtiyacınız varsa, lütfen bakım ekibinizle iletişime geçin."
+  taggings:
+    # Flash message after a tag has been successfully added to an item.
+    tag_added: Etiket başarıyla eklendi
+    # Flash message after a tag was successfully removed from an item.
+    tag_removed: Etiket kaldırıldı
+    # Flash message after removing a tag from an item fails.
+    removing_failed: Etiket kaldırılamadı
+    # Flash message after successfully adding tags to several items.
+    tags_added: Tüm etiketler başarıyla eklendi.
+    # Flash message if there has been an error in adding tags to several items.
+    error_adding_tags: Etiketler eklenirken hatalar oldu. Etiketlerin bazıları veya tümü eklenmemiş olabilir.
+  absences:
+    # Flash message after absence has been succesfully saved
+    saved: Tatil başarıyla kurtarıldı.
+    # Flash message after absence has been succesfully updated
+    updated: Tatil başarıyla güncellendi.
+    # Flash message after absence has been removed succesfully
+    removed_succesfully: Tatil başarıyla kaldırıldı.
+    # Flash message after absence removing failed
+    remove_failed: Devamsızlık kaldırılırken bir hata oluştu. Hata nedeniyle devamsızlık kaldırılmamış olabilir.
+  notifications:
+    # Flash message shown after notifications setting has been succesfully updated
+    successfully_updated: Bildirim ayarları başarıyla güncellendi.
+  treatment_entries:
+    # Flash message shown after treatment event has been succesfully saved.
+    saved: Tedavi olayı başarıyla kaydedildi.
+  groups:
+    saved: Kuruluş kaydedildi
+  exports:
+    # Flash message shown to admin when generating patient PDF reports.
+    generating: Arka planda raporlar oluşturma.
+  challenges:
+    sms_challenge: "%{product_name} doğrulama kodunuz: %{code} Daveti kabul etmek için kodu %{product_name} alanına girin."
+    # An error message shown when the user inputs the wrong verification code from SMS
+    wrong_response_code: "Girdiğiniz kod yanlıştı. Lütfen size gönderdiğimiz SMS&#39;teki kodu kontrol ediniz."
+    # An additional support text to wrong_response_code shown to users with access to tech support
+    wrong_response_code_support: "SMS&#39;i almadıysanız, lütfen müşteri desteği ile iletişime geçin."
+    # An additional support text to wrong_response_code shown to users without access to tech support.
+    wrong_response_code_support_alt: "Yardıma ihtiyacınız varsa, lütfen bakım ekibinizle iletişime geçin."
+    tupas_cancelled: Bankanızdaki kimlik doğrulamasını iptal ettiniz
+    tupas_rejected:
+      unknown_error: Teknik bir sorun nedeniyle kimlik doğrulama başarısız oldu. Lütfen daha sonra tekrar deneyiniz.
+    tupas_person_not_found: Sosyal güvenlik numaranıza göre kullanıcı hesabınız bulunamadı.
+  aava:
+    invoices:
+      index:
+        page_title: Fatura ekleri
+        # Displayed for staff
+        no_customer_number_staff: |-
+          Fatura yöneticileri için müşteri numarası bulunamadı. Fatura yöneticileri için müşteri numaraları eklemelisiniz.
+        # Display for everybody else
+        no_customer_number: |-
+          Müşteri numarası hesabınız için ayarlanmamıştır. Daha fazla bilgi için lütfen laskutus@aava.fi ile iletişime geçin.
+        show_invoices: Fatura eklerini göster
+      show:
+        contact_information: |-
+          Faturalar veya ekleriyle ilgili herhangi bir sorunuz varsa, <a href="mailto:laskutus@aava.fi">laskutus@aava.fi e-posta adresinden bizimle iletişime geçebilirsiniz.</a>
+        no_invoices: Müşteri numarası için fatura bulunamadı.
+        page_title: Fatura ekleri
+      download:
+        invoice_not_found: "%{number} numaralı fatura eki bulunamadı."
+    group_reports:
+      show:
+        # What is the type of report the user wants to download (e.g.  # answers or comparison report)
+        report_type: Rapor tipi
+        # Version of the form the report's generated from
+        form_version: İşyerinde Sağlıklı sürüm
+        form_version_old: "Eski (%{answers} yanıt)"
+        form_version_new: "Yeni (%{answers} yanıt)"
+        # Language of the report
+        language: Dil
+        # Date from when the answers should be collected
+        begin_date: Başlangıç tarihi
+        # Date til the answers should be collected to
+        end_date: Bitiş tarihi
+        # All the raw answers
+        answers_type: Yanıtlar
+        # Comparison report
+        comparison_type: Karşılaştırma raporu
+  calendars:
+    calendar_entries_imported_and_updated: "Kullanıcı için içe aktarılan ve güncellenen takvim girişleri"
+    entity_not_found_on_external_system: "Sistemde varlık bulunamadı. Lütfen hastanın adı, soyadı ve kimlik kodlarının doğru olduğundan emin olun."
+    # Made a modification to calendar entry, eg radiotherapy visit
+    calendar_entries_saved: Takvim girişi kaydedildi
+  login_authentications:
+    sms_resent: Doğrulama kodu size SMS mesajı olarak tekrar gönderildi. Yakında gelmesi gerekir.
+    incorrect_code: Kod yanlıştı. Lütfen doğru sayıları yazdığınızı kontrol edin.
+    sms_send_error: Kodu size gönderirken bir hata oluştu. Üzgünüz - lütfen bir süre sonra &quot;Doğrulama kodunu yeniden gönder&quot;i tıklayın.
+    sms_resend_error: Kodu size yeniden gönderirken bir hata oluştu. Üzgünüz - lütfen bir süre sonra tekrar deneyin.
+    sms_message_with_code: "%{product_name} doğrulama kodunuz: %{code} Kendinizi doğrulamak için kodu %{product_name} alanına girin."
+    # A message displayed for the user when logging in and the account seems to have no phone number in the system
+    sms_phone_not_existing: "Hesabınız için ayarlanmış bir telefon numarası olmadığından SMS kodunu gönderemedik. Telefon numarasını eklemek için lütfen bakım ekibinizle iletişime geçin."
+    # A message displayed for the user when logging in and phone cannot receive SMS messages
+    sms_phone_cannot_receive_sms: "SMS kodunu gönderemedik çünkü sistemdeki telefon numaranız SMS mesajı alamıyor gibi görünüyor. Sorunu çözmek için lütfen bakım ekibinizle iletişime geçin."
+    # A message displayed for the user when loggin in and the phone number in the system is invalid
+    sms_phone_invalid: "Sistemde sahip olduğunuz telefon numarası geçersiz göründüğü için SMS kodunu gönderemedik. Sorunu çözmek için lütfen bakım ekibinizle iletişime geçin."
+  mobile_deep_link_request:
+    sms: "Kaiku Health&#39;i kullanmaya başlamak için m.kaikuhealth.com/%{site_name} adresini açın."
