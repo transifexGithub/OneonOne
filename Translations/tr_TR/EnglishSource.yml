@@ -1,0 +1,271 @@
+tr_TR:
+  admins:
+    message_sent_successfully: Toplu mesaj başarıyla gönderildi].
+    message_failed_to_be_sent_for_everyone: Toplu mesaj herkese ulaştırılamadı
+  application:
+    first_sign_in: Lütfen önce oturum açın
+    session_has_expired: Oturumunuz sona erdi. Lütfen tekrar oturum açın.
+    ip_not_on_whitelist: Personel olarak oturum açmaya yalnızca belirli konumlardan
+      izin verilir. Yalnızca beyaz listedeki IP adreslerinden oturum açabilirsiniz.
+      IP %{ip} beyaz listede değil. Bu konumdan oturum açabilmeniz gerekiyorsa, sistem
+      yöneticisiyle iletişime geçin.
+    unaccepted_required_consents: Hizmeti kullanmak için gereken tüm izinleri vermediniz.
+      Lütfen aşağıdaki rızalarınızı gözden geçirin ve gerekli rızaları vermek için
+      kutuyu/kutuları işaretleyin.
+    unaccepted_required_consent: Devam etmek için bunu kabul etmeniz gerekiyor.
+  answers:
+    updated: Cevap güncellendi
+  form_answers:
+    completed: Form tamamlandı
+    name: 'İsim:'
+    name_letters: 'Baş harfler:'
+    birthday: 'Doğum tarihi:'
+    filling_date: 'Doldurma tarihi:'
+    pdf_error: Pdf dosyası yalnızca QLQ30 formundan oluşturulabilir
+    person_id: Kullanıcı adı
+    you_must_select_form: Doldurulacak formu seçmelisiniz.
+  clients:
+    client_successfully_removed: Hasta %{client} hastalarınızdan başarıyla çıkarıldı.
+    error_occured_while_removing_client: Hasta %{client} kaldırılırken bir hata oluştu.
+    client_successfully_added: Hasta %{client} hastalarınıza başarıyla eklendi.
+    error_occured_while_adding_client: Hasta %{client} eklenirken bir hata oluştu.
+    client_successfully_added_to_other_staff_member: Hasta %{staff} için başarıyla
+      eklendi.
+    client_successfully_removed_from_other_staff_member: Hasta %{staff}&#39;dan başarıyla
+      çıkarıldı.
+    clients_without_care_team:
+      one: Bakım ekibi olmayan aktif bir hasta var. Lütfen hasta için personel ekleyin
+        veya durumlarını inaktif olarak değiştirin. <a href=%{link}>Hastayı göster</a>
+      other: Bakım ekibi olmayan %{count} aktif hasta bulunmaktadır. Lütfen hastalar
+        için personel ekleyin veya durumlarını inaktif olarak değiştirin. <a href=%{link}>Hastaları
+        göster</a>
+    activate:
+      email_blank: Hastanın e-postası boş bırakılamaz. Aktivasyon maili hastanın mail
+        adresine gönderilir.
+      activated: Hasta etkinleştirildi ve aktivasyon e-postası gönderildi.
+      deactivated: Hasta başarıyla devre dışı bırakıldı ve artık hizmete giriş yapamıyor.
+  people:
+    successfully_updated: Bilgi başarıyla güncellendi
+    successfully_saved: Kullanıcı başarıyla oluşturuldu.
+    reset: Şifre başarıyla sıfırlandı.
+    reset_link_sent: Kullanıcıya (%{email}) yeni bir parola belirleme bağlantısı içeren
+      bir e-posta gönderildi.
+    wrong_password: Girdiğiniz mevcut şifre yanlış.
+    no_password: Şifrenizi, telefon numaranızı veya e-posta adresinizi değiştirmek
+      için mevcut şifrenizi girmeniz gerekir.
+    no_need_to_input_new_pw: Şifrenizi değiştirmek istemiyorsanız bunu ve aşağıdaki
+      alanı boş bırakın.
+    date_format_error: format yanlıştı.
+    switch_domain_error: Etki alanı değiştirilirken hata oluştu. Lütfen bu sorunla
+      ilgili olarak teknik desteğe başvurun!
+    invited_users_cannot_reset_password: Şifre sıfırlanamıyor. Davet edilen kullanıcılar,
+      şifreyi sıfırlayabilmek için önce kaydolmalıdır.
+    admin_password_reset_error: Yönetici için parola sıfırlamaya izin verilmez
+  sessions:
+    invalid_credentials: Geçersiz Kullanıcı Kimliği veya Şifre
+    not_active: Kullanıcı durumu sonlandırıldı
+    signed_out: Oturumunuz kapatıldı
+    too_many_failed_attempts: Birçok kez oturum açmayı başaramadınız. Tekrar giriş
+      yapabilmek için %{wait} saniye beklemeniz gerekmektedir.
+    sso_client_not_registered: Hasta henüz servis davetini kabul etmemiştir.
+    send_reset:
+      too_many_requests: Çok fazla şifre sıfırlama isteği gönderdiniz.
+      user_empty: Kullanıcı adı girilmedi.
+    send_auth:
+      sms_has_been_sent: SMS kodu gönderildi.
+      sms_has_not_been_sent: SMS kodu gönderilmedi.
+      wrong_sms_token: Girilen SMS kodu yanlış, lütfen kodu tekrar kontrol edin.
+    auth:
+      invalid_token: Tıkladığınız parola sıfırlama bağlantısının süresi doldu veya
+        geçersiz. Lütfen parola sıfırlama bağlantısını yeniden gönderin.
+      sms_auth_msg: '%{product_name} doğrulama kodunuz %{code}. Parolanızı sıfırlamak
+        için kodu %{product_name}&#39;a girin.'
+      technical_error: Teknik hata
+      invalid_login_method: Kullanıcı hesabınızın bu giriş yöntemini kullanmasına
+        izin verilmiyor
+      person_id_mismatch: Kimlik doğrulamasından gelen sosyal güvenlik numarası, kullanıcı
+        hesabındaki numarayla eşleşmiyor
+      person_id_in_use: Sosyal güvenlik numarası zaten başka bir kullanıcıda kullanılıyor
+      not_set_up: Kullanıcı BankID ile bulunamadı. BankID&#39;yi ilk kez kullanıyorsanız,
+        ayarlamak için kullanıcı adı ve şifre ile giriş yapın.
+      method_not_supported: Kullanıcı hesabınızın bu yöntemlerden birini kullanarak
+        oturum açması gerekir.
+      strict_2fa: Geçerli bir kimlik doğrulama yöntemi yok. Lütfen sağlık personelinizle
+        iletişime geçin
+  conversations:
+    new_conversation: Hasta, hastalarınıza başarıyla eklendi. Siz ve hasta arasında
+      bir konuşma oluşturuldu. Lütfen bu konuşmaya hastanın diğer doktorlarını ve
+      hemşirelerini ekleyin.
+    empty_new_conversation: Boş bir konuşma başarıyla oluşturuldu.
+    add_user: '%{user} sohbete eklendi.'
+    remove_user: '%{user} konuşmadan kaldırıldı.'
+    bad_request: Bir hata nedeniyle isteğiniz tamamlanamadı.
+  messages:
+    forbidden_attachment: Bu tür dosyaların gönderilmesi yasaktır. Güvenlik nedeniyle
+      HTML dosyalarına izin verilmez. Diğer dosya türlerini gönderirken sorun yaşamanız
+      durumunda lütfen teknik desteğe başvurun.
+  feedback:
+    thank_you: Geri bildiriminiz için teşekkür ederiz!
+  reported_grades:
+    grade_reported: Belirti verileri başarıyla bildirildi.
+    grade_reported_error: Not kaydedilirken bir hata oluştu.
+  adverse_effects:
+    updated_successfully: Belirti başarıyla güncellendi
+  values:
+    saved: Yeni değer başarıyla oluşturuldu
+    successfully_updated: Değer başarıyla güncellendi
+  reported_values:
+    saved: Bildirilen değer başarıyla kaydedildi
+    save_error: Bir hata oluştu ve bildirilen değer kaydedilemedi.
+    saved_review: '%{reported_values} %{time} konumuna kaydedildi'
+    edit_button: Düzenle
+    show_button: Göstermek
+    thanks_for_reporting: Teşekkür ederim. Bu bilgiler, buna göre tepki verecek ve
+      gerekirse sizinle iletişime geçecek olan tıbbi personelinize iletilecektir.
+    thanks_for_reporting_staff: Rapor ettiğiniz için teşekkür ederiz.
+    aava_healthy_at_work_completed: 'Thanks, Your answers to Healthy at Work -questionnaire
+      have been saved. The occupational healthcare team will go through the questionnaire
+      and will assess your situation based on the answers you''ve given. You will
+      get feedback from the team via the service.
+
+      '
+  adverse_effects_packages:
+    adverse_effects_package_deleted: Paket silindi
+    adverse_effects_package_save_error: Paket kaydedilirken bir hata oluştu
+  follows:
+    saved: Takip edilen öğeler başarıyla güncellendi.
+    save_error: Takip edilen öğe kaydedilemedi
+  invites:
+    invalid_key: Geçersiz anahtar. Lütfen anahtarı doğru girdiğinizi kontrol edin.
+      Davetinizin süresi dolmuş olabilir ve yeni bir davete ihtiyacınız olabilir.
+    used_key: Davet anahtarınız zaten kullanılmış. Kullanıcı adınız ve şifrenizle
+      giriş yapabilirsiniz.
+    sent_succesfully: Davetiye başarıyla gönderildi.
+    invite_destroyed: Davet başarıyla silindi.
+    invites_destroyed: Seçilen tüm davetiyeler başarıyla silindi.
+    invite_resent: Davetiye başarıyla yeniden gönderildi.
+    invites_resent: Seçilen tüm davetiyeler başarıyla yeniden gönderildi.
+    invalid_person_id: Kişi kimliği boştu veya zaten kullanılıyor. Tüm kullanıcıların
+      benzersiz bir kişi kimliği olmalıdır.
+    clients_with_email_already_exist: 'Aşağıdaki e-posta adreslerine sahip hastalar
+      zaten davet edildi: %{emails}'
+    clones_created: Davetiyeler başarıyla gönderildi
+    email_already_invited: '%{email} e-posta adresine sahip bir davet zaten var.'
+    person_id_already_invited: '%{pid} (e-posta: %{email}) kişisel kimlik koduna sahip
+      bir davet zaten var.'
+    email_already_exists: '%{email} e-posta adresine sahip bir hasta zaten var.'
+    already_exists: Davetiye zaten var. Bunun nedeni, gönder düğmesine çift tıklamak
+      olabilir.
+    person_id_already_exists: '%{pid} (e-posta: %{email}) kişisel kimlik koduna sahip
+      bir hasta zaten var.'
+    person_id_exists_different_domain: '%{pid} (e-posta:%{email}) kişisel kimlik koduna
+      sahip bir hasta veya davetiye zaten başka bir Etki Alanında var - %{domains}.
+      Lütfen teknik desteğe başvurun.'
+    person_email_exists_different_domain: '%{email} e-posta adresine sahip bir hasta
+      veya davetiye, %{domains} adında başka bir etki alanında zaten var. Lütfen teknik
+      desteğe başvurun.'
+    resend_invite: Yeniden gönderme daveti
+    edit_invite: Davetiyeyi düzenle
+    no_changes_made: Davetiyede herhangi bir değişiklik yapılmadı
+    invite_changed_and_resent: Değişiklikler kaydedildi ve davet yeniden gönderildi
+    changes_made_invite_not_resent: değişiklikler kaydedildi
+    unable_to_make_changes: Değişiklikler kaydedilemiyor.
+    unable_to_make_changes_support: Lütfen destek ile iletişime geçin.
+    unable_to_make_changes_support_alt: Yardıma ihtiyacınız varsa, lütfen bakım ekibinizle
+      iletişime geçin.
+  taggings:
+    tag_added: Etiket başarıyla eklendi
+    tag_removed: Etiket kaldırıldı
+    removing_failed: Etiket kaldırılamadı
+    tags_added: Tüm etiketler başarıyla eklendi.
+    error_adding_tags: Etiketler eklenirken hatalar oldu. Etiketlerin bazıları veya
+      tümü eklenmemiş olabilir.
+  absences:
+    saved: Tatil başarıyla kurtarıldı.
+    updated: Tatil başarıyla güncellendi.
+    removed_succesfully: Tatil başarıyla kaldırıldı.
+    remove_failed: Devamsızlık kaldırılırken bir hata oluştu. Hata nedeniyle devamsızlık
+      kaldırılmamış olabilir.
+  notifications:
+    successfully_updated: Bildirim ayarları başarıyla güncellendi.
+  treatment_entries:
+    saved: Tedavi olayı başarıyla kaydedildi.
+  groups:
+    saved: Kuruluş kaydedildi
+  exports:
+    generating: Arka planda raporlar oluşturma.
+  challenges:
+    sms_challenge: '%{product_name} doğrulama kodunuz %{code} Daveti kabul etmek için
+      kodu %{product_name}&#39;a girin.'
+    wrong_response_code: Girdiğiniz kod yanlıştı. Lütfen size gönderdiğimiz SMS&#39;teki
+      kodu kontrol ediniz.
+    wrong_response_code_support: SMS&#39;i almadıysanız, lütfen müşteri desteği ile
+      iletişime geçin.
+    wrong_response_code_support_alt: Yardıma ihtiyacınız varsa, lütfen bakım ekibinizle
+      iletişime geçin.
+    tupas_cancelled: Bankanızdaki kimlik doğrulamasını iptal ettiniz
+    tupas_rejected:
+      unknown_error: Teknik bir sorun nedeniyle kimlik doğrulama başarısız oldu. Lütfen
+        daha sonra tekrar deneyiniz.
+    tupas_person_not_found: Sosyal güvenlik numaranıza göre kullanıcı hesabınız bulunamadı.
+  aava:
+    invoices:
+      index:
+        page_title: Fatura ekleri
+        no_customer_number_staff: 'No customer numbers were found for invoice managers.
+          You have to add customer numbers for invoice managers.
+
+          '
+        no_customer_number: 'The customer number is not set for your account. Please
+          contact laskutus@aava.fi for more information.
+
+          '
+        show_invoices: Fatura eklerini göster
+      show:
+        contact_information: 'If you have any questions regarding invoices or its
+          attachments you can contact us via email <a href="mailto:laskutus@aava.fi">laskutus@aava.fi</a>
+
+          '
+        no_invoices: Müşteri numarası için fatura bulunamadı.
+        page_title: Fatura ekleri
+      download:
+        invoice_not_found: '%{number} numaralı fatura eki bulunamadı.'
+    group_reports:
+      show:
+        report_type: Rapor tipi
+        form_version: İşyerinde Sağlıklı sürüm
+        form_version_old: Eski (%{answers} cevaplar)
+        form_version_new: Yeni (%{answers} cevaplar)
+        language: Dil
+        begin_date: Başlangıç tarihi
+        end_date: Bitiş tarihi
+        answers_type: Yanıtlar
+        comparison_type: Karşılaştırma raporu
+  calendars:
+    calendar_entries_imported_and_updated: Kullanıcı için içe aktarılan ve güncellenen
+      takvim girişleri
+    entity_not_found_on_external_system: Sistemde varlık bulunamadı. Lütfen hastanın
+      adı, soyadı ve kimlik kodlarının doğru olduğundan emin olun.
+    calendar_entries_saved: Takvim girişi kaydedildi
+  login_authentications:
+    sms_resent: Doğrulama kodu size SMS mesajı olarak tekrar gönderildi. Yakında gelmesi
+      gerekir.
+    incorrect_code: Kod yanlıştı. Lütfen doğru sayıları yazdığınızı kontrol edin.
+    sms_send_error: Kodu size gönderirken bir hata oluştu. Üzgünüz - lütfen bir süre
+      sonra &quot;Doğrulama kodunu yeniden gönder&quot;i tıklayın.
+    sms_resend_error: Kodu size yeniden gönderirken bir hata oluştu. Üzgünüz - lütfen
+      bir süre sonra tekrar deneyin.
+    sms_message_with_code: '%{product_name} doğrulama kodunuz %{code} Kendinizi doğrulamak
+      için %{product_name} kodunu girin.'
+    sms_phone_not_existing: Hesabınız için ayarlanmış bir telefon numarası olmadığından
+      SMS kodunu gönderemedik. Telefon numarasını eklemek için lütfen bakım ekibinizle
+      iletişime geçin.
+    sms_phone_cannot_receive_sms: SMS kodunu gönderemedik çünkü sistemdeki telefon
+      numaranız SMS mesajı alamıyor gibi görünüyor. Sorunu çözmek için lütfen bakım
+      ekibinizle iletişime geçin.
+    sms_phone_invalid: Sistemde sahip olduğunuz telefon numarası geçersiz göründüğü
+      için SMS kodunu gönderemedik. Sorunu çözmek için lütfen bakım ekibinizle iletişime
+      geçin.
+  mobile_deep_link_request:
+    sms: Kaiku Health&#39;i kullanmaya başlamak için m.kaikuhealth.com/%{site_name}
+      adresini açın.
