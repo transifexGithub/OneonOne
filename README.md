@@ -33,6 +33,7 @@ Please create a new issue if you want a new language to be added to the project.
 #### Translation status
 
 ![Translation status](https://www.transifex.com/projects/p/sv-approval-advanced/resource/dictsv-approval-advancedjson/chart/image_png)
+![alt text](https://www.transifex.com/projects/p/sv-approval-advanced/resource/dictsv-approval-advancedjson/chart/image_png)
 
 [1]: https://store.itophub.io/en_US/products/combodo-approval-process-automation
 [2]: https://github.com/Combodo/combodo-approval-extended/pull/2
