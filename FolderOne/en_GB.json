@@ -1,0 +1,38 @@
+{
+   "singular_key":{
+      "string":"This is a regular string."
+   },
+   "total_files":{
+      "string":"{ file_count, plural, one {You have {file_count} file.} other {You have {file_count}files.} }",
+      "context":"Additional context:....."
+   },
+   "special_chars":{
+      "string":"{ cnt, plural, one {This is Sam's book.} other {These are Sam's books.} }",
+      "developer_comment":"This is a pluralized string with special character"
+   },
+   "gold_coins":{
+      "string":"{ cnt, plural, one {You have one gold coin.} other {You have {cnt} gold coins.} \n}",
+      "character_limit":150
+   },
+   "key_1":{
+      "key_nested_1a":{
+         "string":"localize"
+      },
+      "key_nested_1b":{
+         "key_nested_1ba":{
+            "string":"translation tools"
+         },
+         "key_nested_1bb":{
+            "string":"{ minute_count, plural, one {minute} other {{minute_count} minutes} }"
+         }
+      }
+   },
+   "parent_key":{
+      "child_key":{
+         "string":"This is a key from a child",
+         "context":"Noun",
+         "developer_comment":"This is a comment.",
+         "character_limit":150
+      }
+   }
+}
