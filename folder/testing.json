@@ -1,0 +1,31 @@
+{
+  "codeForIATIProject": "A project of Code for IATI",
+  "datastoreDowntimeNotice": "Are you using Datastore Classic, including during <a href=\"https://iatistandard.org/en/news/technical-notice-2-iatis-datastore-to-be-integrated-in-new-unified-single-platform/\"> downtime of the official IATI Datastore</a>? We’d love to hear from you, so we can better understand our users and their needs.<br />Get in touch with us at <a href=\"mailto:hello@codeforiati.org\">hello@codeforiati.org</a>",
+  "datastoreClassic": {
+    "heading": "IATI Datastore Classic",
+    "strapline": "The classic version of the IATI Datastore, reloaded."
+  },
+    "dates": {
+      "label": "",
+      "startDateAfter": "",
+      "startDateBefore": "",
+      "endDateAfter": "End date (after)",
+      "endDateBefore": "End date (before)",
+      "datePickerLabels": {
+        "labelPrevDecade": "Previous decade",
+        "labelPrevYear": "Previous year",
+        "labelPrevMonth": "Previous month",
+        "labelCurrentMonth": "Current month",
+        "labelNextMonth": "Next month",
+        "labelNextYear": "Next year",
+        "labelNextDecade": "Next decade",
+        "labelToday": "Today",
+        "labelSelected": "Selected date",
+        "labelNoDateSelected": "No date selected",
+        "labelCalendar": "Calendar",
+        "labelNav": "Calendar navigation",
+        "labelHelp": "Use cursor keys to navigate calendar dates"
+      }
+    }
+  }
+}
