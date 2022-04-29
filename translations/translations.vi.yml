@@ -1,0 +1,890 @@
+vi:
+  onboarding-dashboard:
+    menu:
+      # Text of navigation menu item
+      new-hires-tab: "Nhân viên mới"
+      # Text of navigation menu item, "Content" here is in context of informational resources
+      content-tab: "Nội dung"
+      # Text of navigation menu item, "Activities" here is in context of informational resources
+      content-activities-tab: "Hoạt động"
+      # Text of navigation menu item, "Forms" here is in context of informational resources
+      content-forms-tab: "Biểu mẫu"
+  
+    new-hires:
+      header: "Nhân viên Mới"
+      # amount of selected hires
+      selected: "Đã chọn [NUMBER]"
+      filter:
+        status: Trạng thái
+        office-location: Địa điểm văn phòng
+        more: Nhiều hơn
+      # search field
+      search-by-name: Tìm theo tên nhân viên mới
+      tooltips:
+        select: Chọn nhân viên mới cho hành động hàng loạt
+        select-all: Chọn tất cả nhân viên cho hành động hàng loạt
+      status:
+        in-progress: Đang tiến hành
+        stopped: Đã dừng
+        pending: Đang chờ
+        completed: Hoàn tất
+      headers:
+        # Column header over new hire name
+        name: Nhân viên mới
+        # Column header over new hire's onboarding start date
+        start-date: Ngày bắt đầu
+        # Column header over new hire's job title
+        job-title: Chức danh
+        # Column header over new hire's manager
+        manager: Quản lý
+        # Column header over new hire's onboarding progress
+        progress: Tiến độ
+  
+      #Information when there are no new hired candidates
+      empty-state: Không có nhân viên mới
+  
+      # action, Start onboarding for new hire
+      start-onboarding: Bắt đầu
+      # action, Stop onboarding for new hire
+      stop-onboarding: Dừng
+      # action, Delete new hire
+      delete: Xóa
+  
+      popup:
+        delete-success: "Hồ sơ nhận việc cho [NEW_HIRE_NAME]đã được xóa thành công"
+        delete-failure: "Không thể xóa hồ sơ nhận việc cho [NEW_HIRE_NAME]. Vui lòng thử lại sau"
+  
+      # action, Start onboarding for multiple new hires
+      start-mass-onboarding: Bắt đầu đào tạo nhập môn
+      # action, Stop onboarding for multiple new hires
+      stop-mass-onboarding: Dừng đào tạo nhập môn
+  
+      # information about full loaded list, no more results
+      list-loaded: "Bạn đã đi đến cuối danh sách, không có kết quả để chia sẻ"
+  
+      errors:
+        # Error message displayed when failed to load new hired candidates
+        load-new-hires-failed: Tải nhân viên mới thất bại.
+        # CTA link label to retry load the data.
+        retry: Thử lại
+        popup:
+          # Load new hires popup error info
+          load-new-hires-failed: Không thể tải danh sách nhân viên mới. Vui lòng thử lại.
+          # Popup error message displayed when new hires percentage progress was not loaded properly
+          load-new-hires-progress-failed: Không thể tải tiến độ nhân viên mới. Vui lòng thử lại.
+          # Popup error message displayed when basic filters were not loaded properly
+          load-basic-filters-failed: Không thể tải bộ lọc cơ bản. Vui lòng thử lại.
+          # Popup error message displayed when org field filters were not loaded properly
+          load-org-field-filters-failed: Không thể tải bộ lọc trường org. Vui lòng thử lại.
+          # Popup error message displayed when there was some error with changing new hire state f.e from stopped to in_progress
+          change-onboarding-state: Không thể đổi trạng thái đào tạo nhập môn. Vui lòng thử lại.
+  
+      delete-dialog:
+        # Header for warning for deleting a new hire profile
+        title: "Xóa hồ sơ?"
+        # Content text of deleting a new hire dialog
+        description: "Bạn có chắc chắn muốn xóa hồ sơ cho: [NEW_HIRE_NAME]? Hành động này không thể được hoàn tác."
+  
+    slideout:
+      # Error message displayed when cannot fetch user profile data
+      error: "Có lỗi xảy ra khi lấy chi tiết hồ sơ của nhân viên mới."
+      # Label for start date of new hire's employment
+      start_date_label: 'Bắt đầu vào [DATE]'
+      menu:
+        # Text of dropdown option to download file
+        download-forms: Tải về mẫu hoàn chỉnh
+        # Text of dropdown option to edit new hire profile
+        edit-profile: Chỉnh sửa hồ sơ
+        # Text of tooltip informing about sensitive data
+        sensitivity-tooltip: Tất cả nội dung đều nhạy cảm và chỉ những người dùng có quyền mới có thể tải xuống
+        # Text of tooltip informing that no forms are available to download
+        no-forms-to-download-tooltip: "Xin lỗi, không có biểu mẫu nào có sẵn để tải xuống vào lúc này."
+        # Text of button to delete new-hire profile
+        delete-profile: Xóa hồ sơ
+      new-hire-data-edit-dialog:
+        # new hire data edit dialog title with user first & last name
+        title: "Sửa hồ sơ cho:"
+        # cancel button label
+        cancel: Hủy
+        # save button label
+        save: Lưu
+        # profile photo label
+        profile-photo: Ảnh hồ sơ
+        data:
+          # first name input label
+          first-name: Tên
+          # last name input label
+          last-name: Họ
+          # start date input label
+          start-date: Ngày bắt đầu
+          # new hire location input label
+          new-hire-location: Địa điểm nhân viên mới
+          # email input label
+          email: E-mail
+          # phone input label
+          phone: Điện thoại
+        popup:
+          # error popup displayed after update new hire data failed
+          error: Chúng tôi gặp vấn đề khi lưu chỉnh sửa của bạn. Vui lòng thử lại.
+          # success popup displayed when data update was successful
+          success: Đã cập nhật hồ sơ thành công.
+  
+      sensitive-content-dialog:
+        # Sensitive content dialog title
+        title: Nội dung Nhạy cảm
+        # Sensitive content dialog description
+        description: "Bạn chỉ có quyền tải xuống nội dung không được đánh dấu là nhạy cảm. Vui lòng liên hệ với quản trị viên của bạn để tải xuống bất kỳ tệp nào được đánh dấu bằng biểu tượng khóa:"
+        buttons:
+          cancel: 'Hủy'
+          download-files: 'Tải xuống {FILES_COUNT, plural, =0{0 files} one{1 file} other{# files}}'
+  
+      forms:
+        # Title of the company forms section
+        title: "Biểu mẫu"
+        # Text displayed in forms-box when user has no forms defined
+        empty: "Người dùng chưa có mẫu được quy định"
+        menu:
+          # Text of dropdown option to download file
+          download-file: Tải về tệp
+          # Text of dropdown option to undo marking the form as complete
+          undo-mark-as-complete: Hoàn tác đánh dấu hoàn tất
+        undo-mark-as-complete-dialog:
+          # Title of the confirmation dialog whether to undo marking form as complete
+          title: Hoàn tác đánh dấu hoàn tất
+          # Content of the confirmation dialog whether to undo marking form as complete
+          content: "Hành động này yêu cầu nhân viên mới hoàn tất mẫu đơn lại.[LINE_BREAK][STRONG_BEGIN]Bạn chắc chắn muốn Hoàn tác đánh dấu hoàn tất và đặt hoạt động trở lại danh sách của nhân viên mới?[STRONG_END]"
+  
+      activities:
+        # Title of the activities section
+        title: "Hoạt động"
+        # Text displayed in activity-box inform that user has no activity defined yet
+        empty: "Người dùng không có hoạt động được quy định"
+  
+        menu:
+          # Text of dropdown option to remove selected activity
+          remove: "Gỡ bỏ"
+          # Text of dropdown option to download files for selected activity
+          download: "Tải về tệp"
+          # Text of icon above download button with a description who can download this file
+          download-tooltip: "Chỉ những người dùng có quyền truy cập vào dữ liệu nhạy cảm mới có thể xem hoặc tải xuống nội dung này."
+  
+        remove-dialog:
+          # Title of the confirmation dialog
+          title: Xóa hoạt động
+          # Content of the confirmation dialog
+          content: "Bạn có chắc chắn muốn xóa hoạt động [STRONG_BEGIN][ACTIVITY][STRONG_END]? [LINE_BREAK]Thao tác này không thể được hoàn tác."
+  
+        # Label displayed instead of activity due date when due date is today
+        today: "Hôm nay"
+      activity-creator:
+        # Text of button that call action: create a new activity for user
+        create: "Thêm"
+        # Title of section to create new activity for new hire
+        title: "Thêm hoạt động cho [NEW_HIRE_NAME]"
+        action:
+          # Text of button which trigger publish a new activity action
+          publish: "Đăng công khai"
+        errors:
+          # Error message displayed when creating an activity failed
+          create: "Có lỗi xảy ra khi đang tạo hoạt động. Vui lòng thử lại sau."
+          # Error message displayed when updating an activity failed
+          update: "Có lỗi xảy ra khi đang cập nhật hoạt động. Vui lòng thử lại sau."
+      activity-details:
+        # Title of section containing activity assignee
+        assignee: "Người nhận nhiệm vụ"
+        # Label informing when the latest auto-save happened (e.g. Saved 1 min ago)
+        saved-label: "Đã lưu [TIME_AGO]"
+        # Label informing when that auto-saving of an activity is happening now
+        saving-label: "Đang lưu…"
+        # Label informing that the activity has been completed
+        completed-label: "Hoàn tất"
+        # Label informing about due date of the activity (e.g. Due May 2)
+        due-label: "Kỳ hạn [DATE]"
+        # Text on button going to the details of previous activity
+        previous-button: "Trước"
+        # Text on button going to the details of next activity
+        next-button: "Tiếp"
+        # Tooltip displayed when hovering icon allowing to edit given section
+        edit-tooltip: "Chỉnh sửa"
+        title-description:
+          # Title of section containing title and description of an activity
+          title: "Tiêu đề & mô tả"
+          # Placeholder in input where user enters activity title
+          title-placeholder: "Bạn muốn đặt tên hoạt động này là gì?"
+          # Placeholder in the input where user enters activity description
+          description-placeholder: "Thêm mô tả để người được chỉ định biết cần phải làm gì…"
+          # Label next to checkbox where user marks whether to request uploading files by the hire
+          request-upload: "Yêu cầu nhân viên mới tải lên"
+          # Heading of the list of files uploaded by the user
+          files-uploaded: "Tệp đã tải lên"
+          # Label next to checkbox marks whether this assisgnment contains sensitive data
+          has-sensitive-data: Chứa thông tin nhạy cảm
+          # Tootip message for editing an assisgnment activity
+          sensitive-data-tooltip: Không thể chỉnh sửa cài đặt nhạy cảm. Vui lòng tạo một hoạt động mới để thay đổi cài đặt này
+          # Label text for high priority checkbox
+          high-priority: Đánh dấu là ưu tiên cao
+        dates:
+          # Title of section containing activity dates (send date and due date)
+          title: "Ngày"
+          # Label followed by send date of an activity
+          send-date-label: "Gửi:"
+          # Label above input to choose activity send date
+          send-date-edit: "Ngày gửi"
+          # Placeholder inside input to choose activity send date
+          send-date-placeholder: "Khi nào gửi hoạt động này đến nhân viên mới?"
+          # Label followed by due date of an activity
+          due-date-label: "Kỳ hạn:"
+          # Label above input to choose activity due date
+          due-date-edit: "Ngày đến hạn"
+          # Label followed by date of completing the activity
+          completed-date-label: "Hoàn tất:"
+          # Placeholder inside input to choose activity due date
+          due-date-placeholder: "Khi nào nhân viên mới cần hoàn tất hoạt động này?"
+  
+    content:
+      header: Tổng quan nội dung
+      # Text of navigation menu item, "Activities" here is in context of informational resources
+      activities-tab-header: "Hoạt động"
+      # Text of navigation menu item, "Forms" here is in context of informational resources
+      forms-tab-header: "Mẫu nhân viên mới"
+      # text on button expanding list from default 3 items to all elements
+      view-all: 'Xem tất cả'
+      view-less: 'Xem ít lại'
+      # Information when there are no content definitions (forms or activities) matching given search query
+      no-search-results: Huy hiệu nhân viên đã bị xóa
+      menu:
+        # Label for 'Edit' menu option - editing form or activity definition
+        edit: 'Chỉnh sửa'
+        # Label for 'Delete' menu option - deleting form or activity definition
+        delete: 'Xóa'
+  
+      nav-header:
+        # Text of button which navigates user back to content library
+        back: 'Quay về Thư viện'
+        # Title of page with a form that creates new activity definition
+        create-activity: 'Tạo hoạt động mới'
+        # Title of a page with a form that edits activity definition
+        edit-activity: 'Sửa hoạt động'
+        # Title of page with a form that creates new web form definition
+        create-company-form: Tạo mẫu mới
+        # Title of a page with a form that edits web form definition
+        edit-form: Sửa mẫu
+        # Title of page with a form that creates new PDF form definition
+        create-pdf-form: Tạo mẫu PDF mới
+        # Title of page with a form that edits PDF form definition
+        edit-pdf-form: Sửa mẫu PDF
+        # Title of page with options how to create new form - web form or fillable pdf form
+        add-company-form: Thêm mẫu mới
+  
+      add-new:
+        # Text of button with cta to 'Add new' content
+        cta: 'Thêm nội dung mới'
+        # Text of button with cta to 'Add new' content
+        cta-activities: 'Thêm hoạt động mới'
+        # Text of button with cta to 'Add new' content
+        cta-forms: 'Thêm biểu mẫu mới'
+        # Header of add new modal asking for the type of content the user wants to create
+        header: "Bạn muốn thêm loại nội dung nào?"
+        activities:
+          # Title of "Activities" section inside "Add new" content modal
+          title: Hoạt động
+          # Description of "Activities" section inside "Add new" content modal
+          description: Tạo nhiệm vụ cho để cho nhân viên mới hoàn thành trong khi nhập môn.
+        company-forms:
+          # Title of "Forms" section inside "Add new" content modal
+          title: Biểu mẫu
+          # Description of "Forms" section inside "Add new" content modal
+          description: Thiết kế mẫu web hoặc tải lên mẫu PDF để cho nhân viên mới điền vào.
+  
+      ACTIVITY:
+        # Header of the activities container
+        header: Hoạt động
+        # Description of the activities
+        description: Hoạt động cho nhân viên mới hoàn tất trong giai đoạn tiền nhập môn
+        # Label for Add activity button
+        add: Thêm hoạt động
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Đang xóa hoạt động
+          # Content of the confirmation dialog
+          content: "Bạn có chắc chắn muốn xóa [STRONG_BEGIN][NAME][STRONG_END]? [LINE_BREAK]Một khi đã xóa bạn không thể khôi phục được nữa."
+        messages:
+          # Information when there are no activities to display
+          empty-state: Không có hoạt động khả dụng.
+          # Notification displayed after successful deletion of activity definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] đã được xóa thành công.'
+        errors:
+          # Error message displayed when failed to load activities
+          loading: Tải hoạt động thất bại.
+          # Error message displayed when failed to delete activity definition
+          delete: 'Không xóa được hoạt động. Vui lòng thử lại sau.'
+  
+      WEB_FORM:
+        # Header of the web forms list container
+        header: Biểu mẫu web
+        # Description of the web forms list
+        description: Mẫu và tài liệu riêng của tổ chức
+        # Label for button to add a form
+        add: Thêm Biểu mẫu Web
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Đang xóa mẫu
+          # Content of the confirmation dialog
+          content: "Bạn có chắc chắn muốn xóa [STRONG_BEGIN][NAME][STRONG_END]? [LINE_BREAK]Một khi đã xóa bạn không thể khôi phục được nữa."
+        messages:
+          # Information when there are no forms to display
+          empty-state: Không có biểu mẫu web nào có sẵn.
+          # Notification displayed after successful deletion of form definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] đã được xóa thành công.'
+        errors:
+          # Error message displayed when failed to load forms
+          loading: Không thể tải biểu mẫu web.
+          # Error message displayed when failed to delete the web form definition
+          delete: 'Không thể xóa biểu mẫu web. Vui lòng thử lại'
+  
+      FILLABLE_PDF_FORM:
+        # Header of the forms list container
+        header: Biểu mẫu PDF
+        # Description of the forms list
+        description: Các hình thức đột xuất như thu thuế và các biểu mẫu khác của chính phủ
+        # Label for button to add a form
+        add: Thêm Biểu mẫu PDF
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Đang xóa mẫu
+          # Content of the confirmation dialog
+          content: "Bạn có chắc chắn muốn xóa [STRONG_BEGIN][NAME][STRONG_END]? [LINE_BREAK]Một khi đã xóa bạn không thể khôi phục được nữa."
+        messages:
+          # Information when there are no forms to display
+          empty-state: Không có biểu mẫu PDF có sẵn.
+          # Notification displayed after successful deletion of form definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] đã được xóa thành công.'
+        errors:
+          # Error message displayed when failed to load forms
+          loading: Không thể tải biểu mẫu PDF.
+          # Error message displayed when failed to delete the fillable pdf form definition
+          delete: 'Không thể xóa biểu mẫu web. Vui lòng thử lại'
+  
+      create-activity:
+        # Headline of details section of new activity form
+        details: "Chi tiết hoạt động"
+        # Label for activity name input
+        name: "Chức danh"
+        # Placeholder for activity name input
+        name-placeholder: "Chọn tên cho hoạt động này"
+        # Label for activity description input
+        description: "Mô tả"
+        # Placeholder for activity description input
+        description-placeholder: "Nhập một mô tả ngắn để các thành viên nhóm biết khi nào dùng nó…"
+        # Headline for org field filters
+        filters: "Bộ lọc hoạt động"
+        # Description of filters
+        filters-description: "Hoạt động này sẽ dành cho nhân viên mới trùng khớp với các tiêu chí sau."
+        # Headline of setting section of new activity form
+        settings: "Cài đặt"
+        # Label for "Save" button
+        save: "Lưu"
+        # Label for "Cancel" button
+        cancel: "Hủy"
+        # Label for request upload checkbox
+        request-upload: "Yêu cầu nhân viên mới tải lên"
+        # Message that activity has been successfully created
+        create-success: 'Hoạt động [STRONG_BEGIN][ACTIVITY][STRONG_END] của bạn đã được tạo.'
+        # Message that activity has been successfully created
+        update-success: 'Hoạt động [STRONG_BEGIN][ACTIVITY][STRONG_END] của bạn đã được cập nhật.'
+        errors:
+          # Error message displayed when failed to create activity definition
+          create: "Có lỗi xảy ra khi đang tạo một định nghĩa hoạt động mới. Hãy thử lại sau."
+          # Error message displayed when form didn't pass validation process
+          validation: "Chúng tôi không thể gửi biểu mẫu của bạn. Vui lòng kiểm tra tin nhắn bên dưới các trường."
+  
+      upload-company-form:
+        # Instruction to upload pdf form
+        instruction: "OK, hãy bắt đầu bằng việc tải lên mẫu PDF của bạn…"
+        # Drag and drop area label
+        drag-drop: Kéo và thả tệp
+        # Label for drag and drop area - Drag and drop a file or 'Upload'
+        or: hoặc
+        # Upload button label
+        upload: Tải lên
+        # Duplicate fields list title
+        duplicate-fields: 'Các trường trùng lặp'
+        # Upload pdf error modal
+        error-modal:
+          # Try again button label
+          try-again: Thử lại
+        # Upload a file error message
+        errors:
+          NOT_A_PDF_FILE: "Chúng tôi không thể tải lên tệp của bạn. Đảm bảo tệp được lưu dưới dạng PDF rồi thử lại."
+          NOT_PARSABLE_FILE_PROVIDED: "Chúng tôi không thể tải lên tệp của bạn vì nó đã bị hư. Hãy tạo một tệp mới rồi thử lại."
+          PDF_FILE_PARSING_ERROR: "Chúng tôi không thể tải lên tệp của bạn vì nó đã bị hư. Hãy tạo một tệp mới rồi thử lại."
+          NOT_A_SINGLE_FILLABLE_PDF_FIELD_DEFINED: "Đảm bảo tệp PDF của bạn có ít nhất một mục điền vào được rồi thử lại."
+          SIGNATURE_FIELD_TYPE_NOT_SUPPORTED: 'Để bật chữ ký điện tử cho mẫu của bạn, hãy làm theo các bước sau: [LINE_BREAK] 1. Sửa PDF bằng trình PDF bạn muốn. [LINE_BREAK] 2. Xóa cấu phần chữ ký của Adobe. [LINE_BREAK] 3. Thêm hai hộp văn bản như hướng dẫn bên dưới: [LINE_BREAK] – Chữ ký: Mục hộp văn bản với ID "smartonboard.signature" [LINE_BREAK] – Ngày: Mục hộp văn bản với ID "smartonboard.date"'
+          NO_FILLABLE_FIELDS_DETECTED_IN_PDF: 'Đảm bảo bạn đã gán tất cả trường điền được vào tệp PDF của bạn rồi thử tải lên lại.'
+          METADATA_FIELDS_DO_NOT_EXIST_IN_ANNOTATIONS: 'Định dạng tệp PDF không hợp lệ, hãy mở một phiếu hỗ trợ rồi đính kèm tệp. Chúng tôi muốn giúp bạn sửa tệp.'
+          MULTIPLE_SMART_SIGNATURES_IN_FILE: 'Vui lòng xem lại mẫu để đảm bảo chỉ có một trường chữ ký hoạt động rồi thử lại.'
+          MULTIPLE_ADOBE_SIGNATURES_IN_FILE: 'Vui lòng xem lại mẫu để đảm bảo chỉ có một trường chữ ký hoạt động rồi thử lại.'
+          MIX_OF_SMART_ONBOARD_AND_ADOBE_SIGNATURE_IN_FILE: 'Vui lòng xem lại mẫu để đảm bảo chỉ có một trường chữ ký hoạt động rồi thử lại.'
+          DUPLICATED_FIELD_IDS_DETECTED: 'Các trường biểu mẫu PDF phải có tên duy nhất. Vui lòng đổi tên tất cả trường trùng lặp và tải lên lại.'
+          popup:
+            NOT_A_PDF_FILE: "Ối, có lỗi xảy ra. Đảm bảo mẫu của bạn được lưu dưới dạng tệp PDF rồi thử lại."
+            NOT_PARSABLE_FILE_PROVIDED: "Ối, có lỗi xảy ra. Đảm bảo mẫu của bạn được lưu dưới dạng tệp PDF hợp lệ rồi thử lại."
+            PDF_FILE_PARSING_ERROR: "Ối, có lỗi xảy ra. Đảm bảo mẫu của bạn được lưu dưới dạng tệp PDF hợp lệ rồi thử lại."
+            NOT_A_SINGLE_FILLABLE_PDF_FIELD_DEFINED: "Không phát hiện mục điền được. Hãy tải lên một tệp PDF với ít nhất một trường điền được."
+            SIGNATURE_FIELD_TYPE_NOT_SUPPORTED: "Chúng tôi phát hiện mục chữ ký của Adobe, loại chữ ký này không được hỗ trợ. Hãy làm theo hướng dẫn bên dưới để bật chữ ký điện tử cho mẫu PDF của bạn."
+            NO_FILLABLE_FIELDS_DETECTED_IN_PDF: "Ối. Chúng tôi không phát hiện trường nào điền được trong mẫu tải lên của bạn."
+            METADATA_FIELDS_DO_NOT_EXIST_IN_ANNOTATIONS: "Ối. Chúng tôi phát hiện một vấn đề với mẫu PDF của bạn."
+            MULTIPLE_SMART_SIGNATURES_IN_FILE: "Quá nhiều trường chữ ký."
+            MULTIPLE_ADOBE_SIGNATURES_IN_FILE: "Quá nhiều trường chữ ký."
+            MIX_OF_SMART_ONBOARD_AND_ADOBE_SIGNATURE_IN_FILE: "Quá nhiều trường chữ ký."
+  
+      create-company-form:
+        # Question of how to create a new form
+        how-to-begin: "OK, bắt đầu nào. Bạn muốn bắt đầu như thế nào?"
+        # Option of how to create a new form
+        upload-pdf: Tải lên PDF
+        # Option of how to create a new form
+        create-web-form: Tạo mẫu web
+        # Headline of details section of new form
+        details: Chi tiết mẫu
+        # Label for form name input
+        name: Chức danh
+        # Placeholder for form name input
+        name-placeholder: Chọn tên cho mẫu này
+        # Label for form description input
+        description: Mô tả
+        # Placeholder for form description input
+        description-placeholder: Nhập một mô tả ngắn để các thành viên nhóm biết khi nào dùng nó…
+        # Label for form's uploaded pdf document input
+        uploaded-document: Tài liệu đã tải lên
+        # Headline for org field filters
+        filters: Bộ lọc mẫu
+        # Description of filters
+        filters-description: Mẫu này sẽ dành cho nhân viên mới trùng khớp với các tiêu chí sau.
+        # Headline of setting section of new form
+        settings: Cài đặt
+        # Label for "Back" button
+        back: Trở lại
+        # Label for "Next" button
+        next: Tiếp
+        # Label for "Save" button
+        save: Lưu
+        # Label for "Cancel" button
+        cancel: Hủy
+        # Message displayed when field already exists
+        field-exists: Trường này đã tồn tại trong biểu mẫu
+        errors:
+          # Error message displayed when failed to create form definition
+          create: Có lỗi xảy ra khi đang tạo một định nghĩa mẫu. Hãy thử lại sau.
+          # Error message displayed when form didn't pass validation process
+          validation: Chúng tôi không thể gửi biểu mẫu của bạn. Vui lòng kiểm tra tin nhắn bên dưới các trường.
+          # Error message displayed when failed to fetch fillable PDF form definition
+          get-fillable-pdf-definition: Có lỗi xảy ra khi truy xuất thông tin về mẫu PDF điền được. Hãy làm mới trang hoặc liên hệ quản trị viên hệ thống.
+          # Error message displayed when failed to fetch fillable PDF file
+          download-pdf: Có lỗi xảy ra khi tải về xem trước mẫu PDF. Hãy làm mới trang hoặc liên hệ quản trị viên hệ thống.
+          # Message displayed when no PDF file preview is available
+          preview-unavailable: "Rất tiếc, xem trước tệp PDF điền được không khả dụng."
+  
+      forms:
+        # Label for Form Builder
+        title: Trình xây dựng mẫu
+        # Labels for Forms editor tabs
+        tabs:
+          # Label of Settings tab
+          settings: Cài đặt
+          # Label of Builder tab
+          builder: Trình xây dựng
+          # Label of Builder tab
+          preview: Xem trước
+          # Label of tab for filtering forms list
+          all: TẤT CẢ
+          # Label of tab for filtering forms list
+          web-forms: BIỂU MẪU WEB
+          # Label of tab for filtering forms list
+          pdf-forms: BIỂU MẪU PDF
+  
+        topbar:
+          # Placeholder for form name (inside the input field)
+          namePlaceholder: Vui lòng nhập tên mẫu
+          # Label of Preview button
+          preview: Xem trước
+          # Label of Save button
+          save: Lưu
+          # Message that form has been successfully saved
+          save-success: 'Mẫu [STRONG_BEGIN][FORM_NAME][STRONG_END] của bạn đã được lưu và hiện có trong Thư Viện Mẫu'
+          # Label of Publish button
+          publish: Đăng công khai
+          # Message that form has been successfully published
+          publish-success: 'Mẫu [STRONG_BEGIN][FORM_NAME][STRONG_END] của bạn đã được đăng tải và hiện có trong Thư Viện Mẫu'
+          # Error notification that form name has already been taken
+          update-failure-name: Tên mẫu này đã được sử dụng.
+          # Error notification that user don't have permissions to update the form
+          update-failure-permissions: "Bạn không có đủ quyền hạn để cập nhật mẫu. Vui lòng liên hệ với quản trị viên hệ thống."
+          # Error notification about internal server error
+          update-failure-general: "Có lỗi xảy ra trong khi lưu mẫu. Vui lòng tải lại trang sau chốc lát. Nếu lỗi vẫn xảy ra, hãy liên hệ với bộ phận hỗ trợ."
+        success_dialog:
+          # Question in success publish/save dialog whether the form should be added to the email template
+          add_form_to_template: 'Bạn có muốn thêm nó vào một mẫu e-mail không?'
+          # Dialog button label, action: navigate to Form Library
+          back_to_library: Quay về thư viện
+          # Dialog button label, action: navigate to Email Templates
+          go_to_templates: "Vâng, đến các mẫu"
+        # Case when the user tries to save form without any elements inside or when the user removes all content from form
+        discard-changes-dialog:
+          # Title of confirmation dialog whether to discard changes in form builder
+          title: Thay đổi chưa lưu
+          # Content of confirmation dialog whether to discard changes in form builder
+          content: "Đóng mẫu này sẽ khiến bạn mất những thay đổi chưa lưu.[LINE_BREAK][STRONG_BEGIN]Bạn vẫn muốn đóng mẫu?[STRONG_END]"
+        empty-changes-dialog:
+          # Title of confirmation dialog whether to discard changes in form builder
+          title: Mẫu trống
+          # Content of confirmation dialog whether to discard changes in form builder
+          content: Vui lòng thêm ít nhất một trường có thể điền để tiếp tục
+          # button for discard form and go back to content
+          discard: HỦY BỎ BIỂU MẪU
+          # button to revert last action and return to editing the form
+          back-to-edit: QUAY LẠI CHỈNH SỬA
+        toolbox:
+          tabs:
+            # Available fields that can be added to the form
+            fields: Trường biểu mẫu
+            # Available design components that can added to the form
+            design: Thiết kế
+          fields:
+            header:
+              # Header for fields in category 'Candidate personal information'
+              PERSONAL_DATA: Thông tin cá nhân ứng viên
+              # Header for fields in category 'Other'
+              OTHER: Tất cả các trường khác
+              # Header for fields in "Basic fields" category
+              DOCUMENT: Các trường cơ bản
+              # Header for fields in "Smart fields" category
+              NEW_HIRE: Các trường thông minh
+              # Header for fields in "Personal info" category
+              NEW_HIRE_PERSONAL_INFORMATION_FIELD: Thông tin Cá nhân
+              # Header for fields in "Contact Info" category
+              NEW_HIRE_CONTACT_INFORMATION_FIELD: Thông tin Liên hệ
+              # Header for fields in "Financial Info" category
+              NEW_HIRE_FINANCIAL_INFORMATION_FIELD: Thông tin Tài chính
+            search:
+              # Search field placeholder message
+              search_placeholder: Tìm các trường mẫu hiện có
+  
+          signature-fields:
+            # Header for fields in "Signature fields" category
+            header: Trường chữ ký
+            SIGNATURE:
+              title: Chữ ký
+              hint: Kéo cái này để thu thập chữ ký điện tử
+            INITIALS:
+              title: Tên viết tắt
+              hint: Kéo để thu thập tên viết tắt của người ký
+            DATE:
+              title: Ngày ký
+              hint: Thu thập một dấu mốc ngày khi ký biểu mẫu
+            signed-on: "Ngày ký:"
+            editor:
+              date: Bao gồm mốc thời gian "Ngày ký"
+  
+          design:
+            # Label for free text box
+            FREE_TEXT: Văn bản tự do
+            # Label for divider line box
+            DIVIDER_LINE: Đường phân cách
+            # Label for image box
+            IMAGE: Hành ảnh
+  
+          error:
+            # Error shown when fetching fields list failed
+            fields: 'Chúng tôi không tải được danh sách trường. [LINE_BREAK]Vui lòng làm mới trang sau vài giây và nếu sự cố xảy ra một lần nữa, hãy liên hệ với bộ phận hỗ trợ của chúng tôi.'
+        editor:
+          title:
+            # Label for edit field section
+            edit: Sửa trường
+            # Label for create new field section
+            create: Tạo trường mới
+          labels:
+            # Label for field name
+            name: Tên trường (nội bộ)
+            # Label for field label (over the input field)
+            label: Tiêu đề trường
+            # Label for field placeholder (inside of the input field)
+            placeholder: Văn bản gợi ý
+            # Label for field type
+            type: Loại trường
+            # Label for field required
+            required: Trường bắt buộc
+            # Label for add option button
+            add-option: Thêm lựa chọn
+            # Label for add value button
+            add-value: Thêm giá trị
+            # Label for save button
+            save: Lưu
+            # Label for save and add another button
+            save-and-add: Lưu lại và thêm nút khác
+            # Label for retry button
+            retry: Thử lại
+            permission:
+              # Label for field access permission
+              question: "Người dùng nào có thể xem được dữ liệu câu trả lời?"
+              # Label for 'All' radio button
+              all: "Người dùng nào có thể xem được dữ liệu câu trả lời?"
+              # Label for 'Users with full access' radio button
+              full-access: Người dùng có toàn quyền truy cập
+            visibility:
+              # Label for field visibility
+              question: "Trường này sẽ xuất hiện ở đâu trong hệ thống?"
+              # Label for 'Candidate profile' checkbox field
+              candidate-profile: Hồ sơ của ứng viên
+              # Label for 'New Hire Form' checkbox field
+              new-hire-form: Mẫu Tuyển dụng mới
+              # Label for 'Offer Approval Form' checkbox field
+              offer-approval-form: Mẫu Phê duyệt Đề nghị
+  
+          image:
+            # Edit button label
+            edit: Chỉnh sửa
+            # Text field for drag and drop an image
+            drag-and-drop: Kéo và thả một bức ảnh
+            # Next line of text field for drag and drop
+            or: hoặc
+            # Upload button label
+            upload: Tải lên
+  
+          errors:
+            # Error text for field name input
+            name: Tên trường là bắt buộc
+            # Error text for field title input
+            title: Tiêu đề trường là bắt buộc
+            # Error text for option input
+            option: "Không thể để trống lựa chọn, vui lòng điền vào trường này"
+            # Error text for image upload
+            image-upload: "Có lỗi xảy ra trong khi tải lên ảnh, vui lòng thử lại"
+            # Error for uploading not an image file
+            not-image-file: Chúng tôi không thể tải lên tệp của bạn. Đảm bảo tệp được lưu dưới định dạng ảnh rồi thử lại.
+  
+        layout:
+          # Label inside 'Drag and drop fields' box
+          dropzone: Kéo và thả các trường
+          # Label inside 'Drag and drop fields or design components' box
+          dropzone-extended: 'Kéo và thả [LINK_BEGIN#BUILDER_FIELDS]các trường[LINK_END] hoặc [LINK_BEGIN#BUILDER_DESIGN]đối tượng thiết kế[LINK_END]'
+          # Label for 'Yes' radio button
+          radio-yes: 'Có'
+          # Label for 'Yes' radio button
+          radio-no: 'Không'
+          # Alt for provided image
+          image-alt: Nội dung được chuyên gia nhập môn cung cấp
+  
+        questionTypes:
+          # Type of form field
+          # Text field allow to provide text e.g Champ
+          TEXT: "Văn bản tự do"
+          # Type of form field
+          # Date Picker field allow to choose date e.g. 2013-12-12
+          DATE: "Bảng chọn Ngày"
+          # Type of form field
+          # Numerical field allow to provide number e.g 4
+          NUMBER: "Số học"
+          # Type of form field
+          # Percent field allow to provide number with percent indicator  e.g 20%
+          PERCENT: "Phần trăm"
+          # Type of form field
+          # Currency field allow to provide number with currency indicator e.g 200 $
+          CURRENCY: "Tiền tệ"
+          # Type of form field
+          # User Picker field allow to provide user name
+          USER: "Bộ chọn Người dùng"
+          # Type of form field
+          # Yes / No field allow to check Yes or No button
+          BOOLEAN: "Có / Không"
+          # Type of form field
+          # Single select - dropdown for values
+          SELECT: "Chọn một lần"
+          # Type of form field
+          # Multi select - dropdown for values
+          MULTI_SELECT: "Nhiều lựa chọn"
+          # Type of form field
+          # Region - dropdown for select region e.g Uthai Thani, TH
+          REGION: "Vùng"
+          # Type of form field
+          # Country - dropdown for select country e.g Holland, Italy
+          COUNTRY: "Quốc gia"
+  
+        field-creator:
+          # title of new form field creator
+          title: Tạo trường mới
+          visibility:
+            label: "Người dùng nào có thể xem được dữ liệu câu trả lời?"
+            all: Tất cả
+            full-access-only: Người dùng có toàn quyền truy cập
+          contexts:
+            label: "Trường này sẽ xuất hiện ở đâu trong hệ thống?"
+            CANDIDATE_PROFILE: Hồ sơ Ứng viên
+            OFFER_MANAGEMENT: Mẫu Phê duyệt Đề nghị
+            NEW_HIRE_FORM: Mẫu Tuyển dụng mới
+  
+      definition:
+        dates:
+          header: Lên lịch nội dung của bạn
+          description: "Theo mặc định, nội dung được gửi theo nhóm và đến hạn trước ngày bắt đầu. Chọn nhóm mà bạn muốn thêm nội dung này vào."
+          pre-boarding: TRƯỚC ĐÀO TẠO NHẬP MÔN
+          signed-group:
+            title: Gửi khi đề nghị được ký
+            legal: THỦ TỤC GIẤY TỜ PHÁP LÝ
+            general: THỦ TỤC GIẤY TỜ CHUNG
+          halfway-group:
+            title: Đã gửi nửa chừng trong quá trình trước đào tạo nhập môn
+            know-us: TÌM HIỂU VỀ CHÚNG TÔI
+            day-one: CHUẨN BỊ CHO NGÀY 1
+          custom-dates: Đặt ngày tùy chỉnh
+          remove-custom-dates: Xóa ngày tùy chỉnh
+          error: Vui lòng lên lịch cho nội dung của bạn trước khi tiếp tục.
+          
+    shared:
+      due-date:
+        title:
+          # Header of input field, where user can select 'send date' of activity
+          send: "Ngày gửi"
+          # Header of input field, where user can select 'due-date' of activity
+          due: "Ngày đến hạn"
+        description:
+          # Description text of input, where user can enter activity send date
+          send: "Bạn muốn gửi hoạt động này đến chủ sở hữu khi nào?"
+          # Description text of input, where user can enter activity due date
+          due: "Bạn muốn chủ sở hữu hoàn tất hoạt động này khi nào?"
+        # Label text
+        offer-date: "Ngày đề xuất"
+        # Label text
+        start-date: "Ngày bắt đầu"
+        # Placeholder text of input, where user can enter percentage number
+        placeholder: "% thời gian trước nhập môn"
+      validation:
+        # Field was required, but user didn't provide value
+        required: "Vui lòng cung cấp giá trị không trống cho trường này."
+        # Send Date Field value was set after Due Date Field value
+        send-date-after-due-date: "Vui lòng điều chỉnh ngày để ngày gửi trước ngày hết hạn."
+        # Provided value is too short, should be at least MIN_LENGTH characters long.
+        min-length: "Giá trị không được ngắn hơn [MIN_LENGTH] ký tự."
+        # Provided value is too long, shouldn't be longer than MAX_LENGTH.
+        max-length: "Giá trị không thể dài hơn [MAX_LENGTH] ký tự."
+        # Provided value with [COUNT] characters is too long, shouldn't be longer than MAX_LENGTH.
+        max-length-count: '[COUNT]/[MAX_LENGTH] ký tự. Bạn đã vượt số ký tự tối đa.'
+        # Provided number should be greater than MIN
+        min: "Giá trị phải lớn hơn [MIN]."
+        # Provided number should be less than MAX
+        max: "Giá trị không được lớn hơn [MAX]."
+        # Provided text includes forbidden symbols
+        symbols: "Hãy xóa những thứ sau: [SYMBOLS]."
+        # Provided text includes invalid characters
+        invalid-text: "Giá trị không được chứa các ký tự không hợp lệ, chỉ được phép sử dụng chữ cái."
+        # Provided email is invalid
+        invalid-email: "Giá trị phải là một địa chỉ e-mail hợp lệ."
+      hints:
+        # Hint below description input that tells how many characters has been entered.
+        description-characters-count: '[COUNT]/[MAX_LENGTH] ký tự'
+  
+      buttons:
+        # Confirm button label
+        confirm: Xác nhận
+        # Cancel button label
+        cancel: Hủy
+        # Save button label
+        save: Lưu
+        # Next button label
+        next: Tiếp
+  
+      sensitive-data:
+        # Title for sensitive data
+        title: 'Các quyền'
+        # Description for sensitive data permissions
+        description: Đặt các hạn chế để đảm bảo chỉ những người dùng có quyền mới có thể xem thông tin nhạy cảm
+        # Description text for the checkbox label on form definition
+        checkbox-label-form: Biểu mẫu chứa dữ liệu nhạy cảm
+        # Description text for the checkbox label on activity definition
+        checkbox-label-activity: Nội dung đính kèm với hoạt động này có thể chứa dữ liệu nhạy cảm
+      high-priority-content:
+        # Title for sensitive data
+        title: 'Đặt ưu tiên'
+        # Description for sensitive data permissions
+        description: Bạn có thể đánh dấu nội dung là mức độ ưu tiên cao và chúng tôi sẽ đảm bảo nội dung đó được đặt ở đầu nhóm nội dung
+        # Description text for the checkbox label on form definition
+        checkbox-label-form: Biểu mẫu chứa dữ liệu nhạy cảm
+        # Description text for the checkbox label on activity definition
+        checkbox-label-activity: Đánh dấu là ưu tiên cao
+  
+    smart-fields:
+      FIRST_NAME:
+        title: Tên
+        hint-text: Tên
+      MIDDLE_NAME:
+        title: Tên lót
+        hint-text: Tên lót
+      LAST_NAME:
+        title: Họ
+        hint-text: Họ
+      GENDER:
+        title: Giới tính
+        hint-text: Giới tính
+      DATE_OF_BIRTH:
+        title: Ngày sinh
+        hint-text: Ngày sinh
+      NATIONALITY:
+        title: Quốc tịch
+        hint-text: Quốc tịch
+      MARITAL_STATUS:
+        title: Tình trạng hôn nhân
+        hint-text: Tình trạng hôn nhân
+      NI_SSI_NUMBER:
+        title: Mã số NI SSI
+        hint-text: Mã số NI SSI
+      HOME_ADDRESS:
+        title: Địa chỉ nhà
+        hint-text: Địa chỉ nhà
+      CITY:
+        title: Thành phố
+        hint-text: Thành phố
+      POST_CODE:
+        title: Mã bưu chính
+        hint-text: Mã bưu chính
+      COUNTRY:
+        title: Quốc gia
+        hint-text: Quốc gia
+      TELEPHONE_NUMBER:
+        title: Số điện thoại
+        hint-text: Số điện thoại
+      EMAIL_ADDRESS:
+        title: Địa chỉ email
+        hint-text: Địa chỉ email
+      SORT_CODE:
+        title: Mã phân loại
+        hint-text: Mã phân loại
+      ACCOUNT_NUMBER:
+        title: Số tài khoản
+        hint-text: Số tài khoản
+      ROUTING_NUMBER:
+        title: Số định tuyến
+        hint-text: Số định tuyến
+      ACCOUNT_NAME:
+        title: Tên tài khoản
+        hint-text: Tên tài khoản
+      ACCOUNT_ADDRESS:
+        title: Địa chỉ tài khoản
+        hint-text: Địa chỉ tài khoản
+      IBAN:
+        title: IBAN
+        hint-text: IBAN
+      STATE:
+        title: TÌNH TRẠNG
+        hint-text: Tiểu bang
+      PREFERRED_NAME:
+        title: TÊN GỌI MONG MUỐN
+        hint-text: Tên gọi mong muốn
+  
+    pdf-answers-download:
+      # Message that user should wait for downloading files, will be combined with <link>
+      wait-message: Chúng tôi đang chuẩn bị các tệp của bạn để tải xuống. Để kích hoạt tải xuống theo cách thủ công
+      # Link to be clicked
+      link: nhấn vào đây
+      # Message about closing the window after successful download
+      close-window: "Sau khi tải xuống thành công, bạn có thể đóng cửa sổ."
+ 
