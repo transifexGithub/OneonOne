@@ -1,0 +1,890 @@
+en:
+  onboarding-dashboard:
+    menu:
+      # Text of navigation menu item
+      new-hires-tab: "New-Hires"
+      # Text of navigation menu item, "Content" here is in context of informational resources
+      content-tab: "Content"
+      # Text of navigation menu item, "Activities" here is in context of informational resources
+      content-activities-tab: "Activities"
+      # Text of navigation menu item, "Forms" here is in context of informational resources
+      content-forms-tab: "Forms"
+  
+    new-hires:
+      header: "New Hires"
+      # amount of selected hires
+      selected: "[NUMBER] selected"
+      filter:
+        status: Status
+        office-location: Office Location
+        more: More
+      # search field
+      search-by-name: Search by new hire name
+      tooltips:
+        select: Select new hire for mass action
+        select-all: Select all hires for mass action
+      status:
+        in-progress: In progress
+        stopped: Stopped
+        pending: Pending
+        completed: Completed
+      headers:
+        # Column header over new hire name
+        name: New hire
+        # Column header over new hire's onboarding start date
+        start-date: Start date
+        # Column header over new hire's job title
+        job-title: Job title
+        # Column header over new hire's manager
+        manager: Manager
+        # Column header over new hire's onboarding progress
+        progress: Progress
+  
+      #Information when there are no new hired candidates
+      empty-state: There are no new hires
+  
+      # action, Start onboarding for new hire
+      start-onboarding: Start
+      # action, Stop onboarding for new hire
+      stop-onboarding: Stop
+      # action, Delete new hire
+      delete: Delete
+  
+      popup:
+        delete-success: "Onboarding profile for [NEW_HIRE_NAME] was deleted successfully"
+        delete-failure: "Could not delete onboarding profile for [NEW_HIRE_NAME]. Please try again later"
+  
+      # action, Start onboarding for multiple new hires
+      start-mass-onboarding: Start Onboarding
+      # action, Stop onboarding for multiple new hires
+      stop-mass-onboarding: Stop Onboarding
+  
+      # information about full loaded list, no more results
+      list-loaded: "You’ve reached the end of your list, no more results to share"
+  
+      errors:
+        # Error message displayed when failed to load new hired candidates
+        load-new-hires-failed: Failed to load new hires.
+        # CTA link label to retry load the data.
+        retry: Retry
+        popup:
+          # Load new hires popup error info
+          load-new-hires-failed: Failed to load new hires list. Please try again.
+          # Popup error message displayed when new hires percentage progress was not loaded properly
+          load-new-hires-progress-failed: Failed to load new hires progress. Please try again.
+          # Popup error message displayed when basic filters were not loaded properly
+          load-basic-filters-failed: Failed to load basic filters. Please try again.
+          # Popup error message displayed when org field filters were not loaded properly
+          load-org-field-filters-failed: Failed to load org field filters. Please try again.
+          # Popup error message displayed when there was some error with changing new hire state f.e from stopped to in_progress
+          change-onboarding-state: Failed to change onboarding state. Please try again.
+  
+      delete-dialog:
+        # Header for warning for deleting a new hire profile
+        title: "Delete profile?"
+        # Content text of deleting a new hire dialog
+        description: "Are you sure you want to delete profile for: [NEW_HIRE_NAME]? This action cannot be undone."
+  
+    slideout:
+      # Error message displayed when cannot fetch user profile data
+      error: "An error occured while fetching new hire's profile details."
+      # Label for start date of new hire's employment
+      start_date_label: 'Starts on: [DATE]'
+      menu:
+        # Text of dropdown option to download file
+        download-forms: Download completed forms
+        # Text of dropdown option to edit new hire profile
+        edit-profile: Edit profile
+        # Text of tooltip informing about sensitive data
+        sensitivity-tooltip: All content is sensitive and can only be downloaded by users with permissions
+        # Text of tooltip informing that no forms are available to download
+        no-forms-to-download-tooltip: "Sorry, there are no forms available for download at this time."
+        # Text of button to delete new-hire profile
+        delete-profile: Delete profile
+      new-hire-data-edit-dialog:
+        # new hire data edit dialog title with user first & last name
+        title: "Edit profile for:"
+        # cancel button label
+        cancel: Cancel
+        # save button label
+        save: Save
+        # profile photo label
+        profile-photo: Profile photo
+        data:
+          # first name input label
+          first-name: First Name
+          # last name input label
+          last-name: Last Name
+          # start date input label
+          start-date: Start-date
+          # new hire location input label
+          new-hire-location: New-hire location
+          # email input label
+          email: Email
+          # phone input label
+          phone: Phone
+        popup:
+          # error popup displayed after update new hire data failed
+          error: We had trouble saving your edits. Please try again.
+          # success popup displayed when data update was successful
+          success: Profile updated successfully.
+  
+      sensitive-content-dialog:
+        # Sensitive content dialog title
+        title: Sensitive Content
+        # Sensitive content dialog description
+        description: "You only have permission to download content that is not marked as sensitive. Please contact your administrator to download any files marked with a lock icon: "
+        buttons:
+          cancel: 'Cancel'
+          download-files: 'Download {FILES_COUNT, plural, =0{0 files} one{1 file} other{# files}}'
+  
+      forms:
+        # Title of the company forms section
+        title: "Forms"
+        # Text displayed in forms-box when user has no forms defined
+        empty: "User has no forms defined"
+        menu:
+          # Text of dropdown option to download file
+          download-file: Download file
+          # Text of dropdown option to undo marking the form as complete
+          undo-mark-as-complete: Undo mark as complete
+        undo-mark-as-complete-dialog:
+          # Title of the confirmation dialog whether to undo marking form as complete
+          title: Undo Mark as Complete
+          # Content of the confirmation dialog whether to undo marking form as complete
+          content: "This action will require the New-Hire to complete the entire form again. [LINE_BREAK][STRONG_BEGIN]Are you sure you would like to Undo Mark as Completed and place the activity back on the New-Hire's list?[STRONG_END]"
+  
+      activities:
+        # Title of the activities section
+        title: "Activities"
+        # Text displayed in activity-box inform that user has no activity defined yet
+        empty: "User has no activities defined"
+  
+        menu:
+          # Text of dropdown option to remove selected activity
+          remove: "Remove"
+          # Text of dropdown option to download files for selected activity
+          download: "Download file"
+          # Text of icon above download button with a description who can download this file
+          download-tooltip: "Only users with access to sensitive data may view or download this content."
+  
+        remove-dialog:
+          # Title of the confirmation dialog
+          title: Remove activity
+          # Content of the confirmation dialog
+          content: "Are you sure you want to remove activity [STRONG_BEGIN][ACTIVITY][STRONG_END]? [LINE_BREAK]This action cannot be undone."
+  
+        # Label displayed instead of activity due date when due date is today
+        today: "Today"
+      activity-creator:
+        # Text of button that call action: create a new activity for user
+        create: "Add"
+        # Title of section to create new activity for new hire
+        title: "Add activity for [NEW_HIRE_NAME]"
+        action:
+          # Text of button which trigger publish a new activity action
+          publish: "Publish"
+        errors:
+          # Error message displayed when creating an activity failed
+          create: "An error occured while creating an activity. Try again later."
+          # Error message displayed when updating an activity failed
+          update: "An error occured while updating an activity. Try again later."
+      activity-details:
+        # Title of section containing activity assignee
+        assignee: "Assignee"
+        # Label informing when the latest auto-save happened (e.g. Saved 1 min ago)
+        saved-label: "Saved [TIME_AGO]"
+        # Label informing when that auto-saving of an activity is happening now
+        saving-label: "Saving..."
+        # Label informing that the activity has been completed
+        completed-label: "Completed"
+        # Label informing about due date of the activity (e.g. Due May 2)
+        due-label: "Due [DATE]"
+        # Text on button going to the details of previous activity
+        previous-button: "Previous"
+        # Text on button going to the details of next activity
+        next-button: "Next"
+        # Tooltip displayed when hovering icon allowing to edit given section
+        edit-tooltip: "Edit"
+        title-description:
+          # Title of section containing title and description of an activity
+          title: "Title & Description"
+          # Placeholder in input where user enters activity title
+          title-placeholder: "What would you like to name this activity?"
+          # Placeholder in the input where user enters activity description
+          description-placeholder: "Add a description so the assignee knows what to do..."
+          # Label next to checkbox where user marks whether to request uploading files by the hire
+          request-upload: "Request an upload from new hire"
+          # Heading of the list of files uploaded by the user
+          files-uploaded: "Files uploaded"
+          # Label next to checkbox marks whether this assisgnment contains sensitive data
+          has-sensitive-data: Contains sensitive information
+          # Tootip message for editing an assisgnment activity
+          sensitive-data-tooltip: Sensitive setting may not be edited. Please create a new activity to change this setting
+          # Label text for high priority checkbox
+          high-priority: Mark as high priority
+        dates:
+          # Title of section containing activity dates (send date and due date)
+          title: "Dates"
+          # Label followed by send date of an activity
+          send-date-label: "Send:"
+          # Label above input to choose activity send date
+          send-date-edit: "Send date"
+          # Placeholder inside input to choose activity send date
+          send-date-placeholder: "When should this activity be sent to new hire?"
+          # Label followed by due date of an activity
+          due-date-label: "Due:"
+          # Label above input to choose activity due date
+          due-date-edit: "Due date"
+          # Label followed by date of completing the activity
+          completed-date-label: "Completed:"
+          # Placeholder inside input to choose activity due date
+          due-date-placeholder: "When should new hire complete this activity?"
+  
+    content:
+      header: Content Overview
+      # Text of navigation menu item, "Activities" here is in context of informational resources
+      activities-tab-header: "Activities"
+      # Text of navigation menu item, "Forms" here is in context of informational resources
+      forms-tab-header: "New-hire forms"
+      # text on button expanding list from default 3 items to all elements
+      view-all: 'View all'
+      view-less: 'View less'
+      # Information when there are no content definitions (forms or activities) matching given search query
+      no-search-results: Your search did not match any results.
+      menu:
+        # Label for 'Edit' menu option - editing form or activity definition
+        edit: 'Edit'
+        # Label for 'Delete' menu option - deleting form or activity definition
+        delete: 'Delete'
+  
+      nav-header:
+        # Text of button which navigates user back to content library
+        back: 'Back to Library'
+        # Title of page with a form that creates new activity definition
+        create-activity: 'Create New Activity'
+        # Title of a page with a form that edits activity definition
+        edit-activity: 'Edit Activity'
+        # Title of page with a form that creates new web form definition
+        create-company-form: Create New Form
+        # Title of a page with a form that edits web form definition
+        edit-form: Edit Form
+        # Title of page with a form that creates new PDF form definition
+        create-pdf-form: Create New PDF Form
+        # Title of page with a form that edits PDF form definition
+        edit-pdf-form: Edit PDF Form
+        # Title of page with options how to create new form - web form or fillable pdf form
+        add-company-form: Add New Form
+  
+      add-new:
+        # Text of button with cta to 'Add new' content
+        cta: 'Add new content'
+        # Text of button with cta to 'Add new' content
+        cta-activities: 'Add new activity'
+        # Text of button with cta to 'Add new' content
+        cta-forms: 'Add new form'
+        # Header of add new modal asking for the type of content the user wants to create
+        header: "What type of content would you like to add?"
+        activities:
+          # Title of "Activities" section inside "Add new" content modal
+          title: Activities
+          # Description of "Activities" section inside "Add new" content modal
+          description: Create tasks for new-hires to complete during onboarding.
+        company-forms:
+          # Title of "Forms" section inside "Add new" content modal
+          title: Forms
+          # Description of "Forms" section inside "Add new" content modal
+          description: Design Web Forms or upload PDF Forms to be filled in by new hire.
+  
+      ACTIVITY:
+        # Header of the activities container
+        header: Activities
+        # Description of the activities
+        description: Activities for the new-hire to complete during pre-boarding
+        # Label for Add activity button
+        add: Add activity
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Deleting your activity
+          # Content of the confirmation dialog
+          content: "Are you sure you want to delete [STRONG_BEGIN][NAME][STRONG_END]? [LINE_BREAK]Once deleted you won't be able to recover it."
+        messages:
+          # Information when there are no activities to display
+          empty-state: There are no activities available.
+          # Notification displayed after successful deletion of activity definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] has been successfully deleted.'
+        errors:
+          # Error message displayed when failed to load activities
+          loading: Failed to load activities.
+          # Error message displayed when failed to delete activity definition
+          delete: 'Failed to delete the activity. Please try again later.'
+  
+      WEB_FORM:
+        # Header of the web forms list container
+        header: Web Forms
+        # Description of the web forms list
+        description: Forms and documents specific to our organization
+        # Label for button to add a form
+        add: Add Web Form
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Deleting your form
+          # Content of the confirmation dialog
+          content: "Are you sure you want to delete [STRONG_BEGIN][NAME][STRONG_END]? [LINE_BREAK]Once deleted you won't be able to recover it."
+        messages:
+          # Information when there are no forms to display
+          empty-state: There are no web forms available.
+          # Notification displayed after successful deletion of form definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] has been successfully deleted.'
+        errors:
+          # Error message displayed when failed to load forms
+          loading: Failed to load web forms.
+          # Error message displayed when failed to delete the web form definition
+          delete: 'Failed to delete the web form. Please try again later.'
+  
+      FILLABLE_PDF_FORM:
+        # Header of the forms list container
+        header: PDF Forms
+        # Description of the forms list
+        description: Out-of-the-box forms such as tax collection and other government forms
+        # Label for button to add a form
+        add: Add PDF Form
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Deleting your form
+          # Content of the confirmation dialog
+          content: "Are you sure you want to delete [STRONG_BEGIN][NAME][STRONG_END]? [LINE_BREAK]Once deleted you won't be able to recover it."
+        messages:
+          # Information when there are no forms to display
+          empty-state: There are no PDF forms available.
+          # Notification displayed after successful deletion of form definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] has been successfully deleted.'
+        errors:
+          # Error message displayed when failed to load forms
+          loading: Failed to load PDF forms.
+          # Error message displayed when failed to delete the fillable pdf form definition
+          delete: 'Failed to delete the web form. Please try again later.'
+  
+      create-activity:
+        # Headline of details section of new activity form
+        details: "Activity Details"
+        # Label for activity name input
+        name: "Title"
+        # Placeholder for activity name input
+        name-placeholder: "Choose a name for this activity"
+        # Label for activity description input
+        description: "Description"
+        # Placeholder for activity description input
+        description-placeholder: "Enter a short description so team members know when to use it..."
+        # Headline for org field filters
+        filters: "Activity Filters"
+        # Description of filters
+        filters-description: "The activity will be available for new-hires that match the following criteria."
+        # Headline of setting section of new activity form
+        settings: "Settings"
+        # Label for "Save" button
+        save: "Save"
+        # Label for "Cancel" button
+        cancel: "Cancel"
+        # Label for request upload checkbox
+        request-upload: "Request upload from new-hire"
+        # Message that activity has been successfully created
+        create-success: 'Your activity [STRONG_BEGIN][ACTIVITY][STRONG_END] has been created.'
+        # Message that activity has been successfully created
+        update-success: 'Your activity [STRONG_BEGIN][ACTIVITY][STRONG_END] has been updated.'
+        errors:
+          # Error message displayed when failed to create activity definition
+          create: "An error occurred while creating a activity definition. Try again later."
+          # Error message displayed when form didn't pass validation process
+          validation: "We couldn't submit your form. Please check messages below the fields."
+  
+      upload-company-form:
+        # Instruction to upload pdf form
+        instruction: "Ok, let's get started by uploading your pdf form..."
+        # Drag and drop area label
+        drag-drop: Drag and drop a file
+        # Label for drag and drop area - Drag and drop a file or 'Upload'
+        or: or
+        # Upload button label
+        upload: Upload
+        # Duplicate fields list title
+        duplicate-fields: 'Duplicate fields'
+        # Upload pdf error modal
+        error-modal:
+          # Try again button label
+          try-again: Try again
+        # Upload a file error message
+        errors:
+          NOT_A_PDF_FILE: "We couldn't upload your file. Please make sure it’s saved as a PDF and try again."
+          NOT_PARSABLE_FILE_PROVIDED: "We couldn't upload your file because it's corrupted. Please create a new one and try again."
+          PDF_FILE_PARSING_ERROR: "We couldn't upload your file because it's corrupted. Please create a new one and try again."
+          NOT_A_SINGLE_FILLABLE_PDF_FIELD_DEFINED: "Please make sure your PDF has at least one fillable form field and try again."
+          SIGNATURE_FIELD_TYPE_NOT_SUPPORTED: 'To enable an Electronic Signature for your form, please follow the following steps: [LINE_BREAK] 1. Edit your PDF using your preferred PDF editor. [LINE_BREAK] 2. Remove the Adobe signature component. [LINE_BREAK] 3. Add two text boxes as clarified below: [LINE_BREAK] - Signature: Text box field with ID "smartonboard.signature" [LINE_BREAK] - Date: Text box field with ID "smartonboard.date"'
+          NO_FILLABLE_FIELDS_DETECTED_IN_PDF: 'Make sure you have assigned all fillable fields to your PDF and try uploading again.'
+          METADATA_FIELDS_DO_NOT_EXIST_IN_ANNOTATIONS: 'Invalid pdf file format, please open a support ticket and attach the file. We would like to help you fixing the file.'
+          MULTIPLE_SMART_SIGNATURES_IN_FILE: 'Please review your form to ensure you only have one active signature field and try again.'
+          MULTIPLE_ADOBE_SIGNATURES_IN_FILE: 'Please review your form to ensure you only have one active signature field and try again.'
+          MIX_OF_SMART_ONBOARD_AND_ADOBE_SIGNATURE_IN_FILE: 'Please review your form to ensure you only have one active signature field and try again.'
+          DUPLICATED_FIELD_IDS_DETECTED: 'PDF form fields must have unique names. Please rename all duplicates and upload again.'
+          popup:
+            NOT_A_PDF_FILE: "Oops, something went wrong. Please make sure your form is saved as a PDF and try again."
+            NOT_PARSABLE_FILE_PROVIDED: "Oops, something went wrong. Please make sure your form is saved as a valid PDF and try again."
+            PDF_FILE_PARSING_ERROR: "Oops, something went wrong. Please make sure your form is saved as a valid PDF and try again."
+            NOT_A_SINGLE_FILLABLE_PDF_FIELD_DEFINED: "No fillable fields detected. Please upload a PDF with at least one fillable form field."
+            SIGNATURE_FIELD_TYPE_NOT_SUPPORTED: "We detected an Adobe Signature field, this type of signature is not supported. Please follow instructions provided below to enable Electronic Signature for your PDF Form."
+            NO_FILLABLE_FIELDS_DETECTED_IN_PDF: "Uh, oh. We didn't detect any fillable fields in your form upload."
+            METADATA_FIELDS_DO_NOT_EXIST_IN_ANNOTATIONS: "Uh oh. We detected an issue with your PDF Form."
+            MULTIPLE_SMART_SIGNATURES_IN_FILE: "Too many signature fields."
+            MULTIPLE_ADOBE_SIGNATURES_IN_FILE: "Too many signature fields."
+            MIX_OF_SMART_ONBOARD_AND_ADOBE_SIGNATURE_IN_FILE: "Too many signature fields."
+  
+      create-company-form:
+        # Question of how to create a new form
+        how-to-begin: "Ok, let's get started. How would you like to begin?"
+        # Option of how to create a new form
+        upload-pdf: Upload PDF
+        # Option of how to create a new form
+        create-web-form: Create web form
+        # Headline of details section of new form
+        details: Form Details
+        # Label for form name input
+        name: Title
+        # Placeholder for form name input
+        name-placeholder: Choose a name for this form
+        # Label for form description input
+        description: Description
+        # Placeholder for form description input
+        description-placeholder: Enter a short description so team members know when to use it...
+        # Label for form's uploaded pdf document input
+        uploaded-document: Uploaded Document
+        # Headline for org field filters
+        filters: Form Filters
+        # Description of filters
+        filters-description: The form will be available for new-hires that match the following criteria.
+        # Headline of setting section of new form
+        settings: Settings
+        # Label for "Back" button
+        back: Back
+        # Label for "Next" button
+        next: Next
+        # Label for "Save" button
+        save: Save
+        # Label for "Cancel" button
+        cancel: Cancel
+        # Message displayed when field already exists
+        field-exists: This field already exists in the form
+        errors:
+          # Error message displayed when failed to create form definition
+          create: An error occured while creating a form definition. Try again later.
+          # Error message displayed when form didn't pass validation process
+          validation: We couldn't submit your form. Please check messages below the fields.
+          # Error message displayed when failed to fetch fillable PDF form definition
+          get-fillable-pdf-definition: An error occured while fetching the information about fillable PDF form. Try to refresh the page or contact your system administrator.
+          # Error message displayed when failed to fetch fillable PDF file
+          download-pdf: An error occured while downloading the preview of PDF form. Try to refresh the page or contact your system administrator.
+          # Message displayed when no PDF file preview is available
+          preview-unavailable: "Sorry, the fillable PDF file preview is not available."
+  
+      forms:
+        # Label for Form Builder
+        title: Form Builder
+        # Labels for Forms editor tabs
+        tabs:
+          # Label of Settings tab
+          settings: Settings
+          # Label of Builder tab
+          builder: Builder
+          # Label of Builder tab
+          preview: Preview
+          # Label of tab for filtering forms list
+          all: ALL
+          # Label of tab for filtering forms list
+          web-forms: WEB FORMS
+          # Label of tab for filtering forms list
+          pdf-forms: PDF FORMS
+  
+        topbar:
+          # Placeholder for form name (inside the input field)
+          namePlaceholder: Please enter a form name
+          # Label of Preview button
+          preview: Preview
+          # Label of Save button
+          save: Save
+          # Message that form has been successfully saved
+          save-success: 'Your form [STRONG_BEGIN][FORM_NAME][STRONG_END] has been saved and is now available in your Form Library'
+          # Label of Publish button
+          publish: Publish
+          # Message that form has been successfully published
+          publish-success: 'Your form [STRONG_BEGIN][FORM_NAME][STRONG_END] has been published and is now available in your Form Library'
+          # Error notification that form name has already been taken
+          update-failure-name: This form name is already taken.
+          # Error notification that user don't have permissions to update the form
+          update-failure-permissions: "You don't have sufficient permissions to update the form. Please contact your system administrator."
+          # Error notification about internal server error
+          update-failure-general: "An error occurred while saving the form. Please refresh the page in a few seconds and if the problem occurs again contact our support."
+        success_dialog:
+          # Question in success publish/save dialog whether the form should be added to the email template
+          add_form_to_template: 'Would you like to add it to an email template?'
+          # Dialog button label, action: navigate to Form Library
+          back_to_library: Back to library
+          # Dialog button label, action: navigate to Email Templates
+          go_to_templates: Yes go to templates
+        # Case when the user tries to save form without any elements inside or when the user removes all content from form
+        discard-changes-dialog:
+          # Title of confirmation dialog whether to discard changes in form builder
+          title: Unsaved changes
+          # Content of confirmation dialog whether to discard changes in form builder
+          content: "Closing this form will cause you to lose any unsaved changes. [LINE_BREAK][STRONG_BEGIN]Would you still like to close the form?[STRONG_END]"
+        empty-changes-dialog:
+          # Title of confirmation dialog whether to discard changes in form builder
+          title: Empty Form
+          # Content of confirmation dialog whether to discard changes in form builder
+          content: Please add at least one fillable field to continue
+          # button for discard form and go back to content
+          discard: DISCARD FORM
+          # button to revert last action and return to editing the form
+          back-to-edit: BACK TO EDIT
+        toolbox:
+          tabs:
+            # Available fields that can be added to the form
+            fields: Form fields
+            # Available design components that can added to the form
+            design: Design
+          fields:
+            header:
+              # Header for fields in category 'Candidate personal information'
+              PERSONAL_DATA: Candidate personal information
+              # Header for fields in category 'Other'
+              OTHER: All other fields
+              # Header for fields in "Basic fields" category
+              DOCUMENT: Basic fields
+              # Header for fields in "Smart fields" category
+              NEW_HIRE: Smart fields
+              # Header for fields in "Personal info" category
+              NEW_HIRE_PERSONAL_INFORMATION_FIELD: Personal Info
+              # Header for fields in "Contact Info" category
+              NEW_HIRE_CONTACT_INFORMATION_FIELD: Contact Info
+              # Header for fields in "Financial Info" category
+              NEW_HIRE_FINANCIAL_INFORMATION_FIELD: Financial Info
+            search:
+              # Search field placeholder message
+              search_placeholder: Search existing form fields
+  
+          signature-fields:
+            # Header for fields in "Signature fields" category
+            header: Signature fields
+            SIGNATURE:
+              title: Signature
+              hint: Drag this to collect an electronic signature
+            INITIALS:
+              title: Initials
+              hint: Drag to collect the signer's initials
+            DATE:
+              title: Date signed
+              hint: Collect a date stamp when form is signed
+            signed-on: "Signed on:"
+            editor:
+              date: Include “Signed on” date stamp
+  
+          design:
+            # Label for free text box
+            FREE_TEXT: Free text
+            # Label for divider line box
+            DIVIDER_LINE: Divider line
+            # Label for image box
+            IMAGE: Image
+  
+          error:
+            # Error shown when fetching fields list failed
+            fields: 'We failed to load the fields list. [LINE_BREAK]Please refresh the page in a few seconds and if the problem occurs again contact our support.'
+        editor:
+          title:
+            # Label for edit field section
+            edit: Edit field
+            # Label for create new field section
+            create: Create new field
+          labels:
+            # Label for field name
+            name: Field name (internal)
+            # Label for field label (over the input field)
+            label: Field title
+            # Label for field placeholder (inside of the input field)
+            placeholder: Hint text
+            # Label for field type
+            type: Field type
+            # Label for field required
+            required: Required field
+            # Label for add option button
+            add-option: Add option
+            # Label for add value button
+            add-value: Add value
+            # Label for save button
+            save: Save
+            # Label for save and add another button
+            save-and-add: Save & Add Another
+            # Label for retry button
+            retry: Retry
+            permission:
+              # Label for field access permission
+              question: "Which users can see answer data?"
+              # Label for 'All' radio button
+              all: "Which users can see answer data?"
+              # Label for 'Users with full access' radio button
+              full-access: Users with full access
+            visibility:
+              # Label for field visibility
+              question: "Where in the system does this appear?"
+              # Label for 'Candidate profile' checkbox field
+              candidate-profile: Candidate profile
+              # Label for 'New Hire Form' checkbox field
+              new-hire-form: New Hire Form
+              # Label for 'Offer Approval Form' checkbox field
+              offer-approval-form: Offer Approval Form
+  
+          image:
+            # Edit button label
+            edit: Edit
+            # Text field for drag and drop an image
+            drag-and-drop: Drag and drop an image
+            # Next line of text field for drag and drop
+            or: or
+            # Upload button label
+            upload: Upload
+  
+          errors:
+            # Error text for field name input
+            name: Field name is required
+            # Error text for field title input
+            title: Field title is required
+            # Error text for option input
+            option: "Option cannot be empty, please fill out this field"
+            # Error text for image upload
+            image-upload: "Error occured during image upload, please retry"
+            # Error for uploading not an image file
+            not-image-file: We couldn't upload your file. Please make sure it’s saved in image format and try again.
+  
+        layout:
+          # Label inside 'Drag and drop fields' box
+          dropzone: Drag and drop fields
+          # Label inside 'Drag and drop fields or design components' box
+          dropzone-extended: 'Drag and drop [LINK_BEGIN#BUILDER_FIELDS]fields[LINK_END] or [LINK_BEGIN#BUILDER_DESIGN]design components[LINK_END]'
+          # Label for 'Yes' radio button
+          radio-yes: 'Yes'
+          # Label for 'Yes' radio button
+          radio-no: 'No'
+          # Alt for provided image
+          image-alt: Content provided by the onboarding specialist
+  
+        questionTypes:
+          # Type of form field
+          # Text field allow to provide text e.g Champ
+          TEXT: "Free Text"
+          # Type of form field
+          # Date Picker field allow to choose date e.g. 2013-12-12
+          DATE: "Date Picker"
+          # Type of form field
+          # Numerical field allow to provide number e.g 4
+          NUMBER: "Numerical"
+          # Type of form field
+          # Percent field allow to provide number with percent indicator  e.g 20%
+          PERCENT: "Percent"
+          # Type of form field
+          # Currency field allow to provide number with currency indicator e.g 200 $
+          CURRENCY: "Currency"
+          # Type of form field
+          # User Picker field allow to provide user name
+          USER: "User Picker"
+          # Type of form field
+          # Yes / No field allow to check Yes or No button
+          BOOLEAN: "Yes / No"
+          # Type of form field
+          # Single select - dropdown for values
+          SELECT: "Single-Select"
+          # Type of form field
+          # Multi select - dropdown for values
+          MULTI_SELECT: "Multi-Select"
+          # Type of form field
+          # Region - dropdown for select region e.g Uthai Thani, TH
+          REGION: "Region"
+          # Type of form field
+          # Country - dropdown for select country e.g Holland, Italy
+          COUNTRY: "Country"
+  
+        field-creator:
+          # title of new form field creator
+          title: Create New Field
+          visibility:
+            label: "Which users can see answer data?"
+            all: All
+            full-access-only: Users with full access
+          contexts:
+            label: "Where in the system does this appear?"
+            CANDIDATE_PROFILE: Candidate Profile
+            OFFER_MANAGEMENT: Offer Approval Form
+            NEW_HIRE_FORM: New Hire Form
+  
+      definition:
+        dates:
+          header: Schedule your content
+          description: "By default, content is sent in groups and due by start date. Select which group you would like to add this content to."
+          pre-boarding: PRE-BOARDING
+          signed-group:
+            title: Sent when offer is signed
+            legal: LEGAL PAPERWORK
+            general: GENERAL PAPERWORK
+          halfway-group:
+            title: Sent halfway through preboarding
+            know-us: GET TO KNOW US
+            day-one: PREPARE FOR DAY 1
+          custom-dates: Set custom dates
+          remove-custom-dates: Remove custom dates
+          error: Please schedule your content before continuing.
+          
+    shared:
+      due-date:
+        title:
+          # Header of input field, where user can select 'send date' of activity
+          send: "Send date"
+          # Header of input field, where user can select 'due-date' of activity
+          due: "Due date"
+        description:
+          # Description text of input, where user can enter activity send date
+          send: "When would you like this activity to be sent to owner?"
+          # Description text of input, where user can enter activity due date
+          due: "When would you like this activity to be completed by owner?"
+        # Label text
+        offer-date: "Offer date"
+        # Label text
+        start-date: "Start date"
+        # Placeholder text of input, where user can enter percentage number
+        placeholder: "% of pre-boarding time"
+      validation:
+        # Field was required, but user didn't provide value
+        required: "Please provide non empty value for this field."
+        # Send Date Field value was set after Due Date Field value
+        send-date-after-due-date: "Please adjust the dates so that send date is before due date."
+        # Provided value is too short, should be at least MIN_LENGTH characters long.
+        min-length: "Value cannot be shorter than [MIN_LENGTH] characters."
+        # Provided value is too long, shouldn't be longer than MAX_LENGTH.
+        max-length: "Value cannot be longer than [MAX_LENGTH] characters."
+        # Provided value with [COUNT] characters is too long, shouldn't be longer than MAX_LENGTH.
+        max-length-count: '[COUNT]/[MAX_LENGTH] characters. You have surpassed the maximum character count.'
+        # Provided number should be greater than MIN
+        min: "Value must be greater than [MIN]."
+        # Provided number should be less than MAX
+        max: "Value cannot be greater than [MAX]."
+        # Provided text includes forbidden symbols
+        symbols: "Please delete the following: [SYMBOLS]."
+        # Provided text includes invalid characters
+        invalid-text: "Value cannot contain invalid characters, only letters allowed."
+        # Provided email is invalid
+        invalid-email: "Value must be a valid email address."
+      hints:
+        # Hint below description input that tells how many characters has been entered.
+        description-characters-count: '[COUNT]/[MAX_LENGTH] characters'
+  
+      buttons:
+        # Confirm button label
+        confirm: Confirm
+        # Cancel button label
+        cancel: Cancel
+        # Save button label
+        save: Save
+        # Next button label
+        next: Next
+  
+      sensitive-data:
+        # Title for sensitive data
+        title: 'Permissions'
+        # Description for sensitive data permissions
+        description: Set restrictions to ensure only users with permissions can view sensitive information
+        # Description text for the checkbox label on form definition
+        checkbox-label-form: Form contains sensitive data
+        # Description text for the checkbox label on activity definition
+        checkbox-label-activity: Content attached to this activity may contain sensitive data
+      high-priority-content:
+        # Title for sensitive data
+        title: 'Set priority'
+        # Description for sensitive data permissions
+        description: You can mark content as high priority and we’ll make sure it’s placed at the top of the content group
+        # Description text for the checkbox label on form definition
+        checkbox-label-form: Form contains sensitive data
+        # Description text for the checkbox label on activity definition
+        checkbox-label-activity: Mark as high priority
+  
+    smart-fields:
+      FIRST_NAME:
+        title: First name
+        hint-text: First name
+      MIDDLE_NAME:
+        title: Middle name
+        hint-text: Middle name
+      LAST_NAME:
+        title: Last name
+        hint-text: Last name
+      GENDER:
+        title: Gender
+        hint-text: Gender
+      DATE_OF_BIRTH:
+        title: Date of birth
+        hint-text: Date of birth
+      NATIONALITY:
+        title: Nationality
+        hint-text: Nationality
+      MARITAL_STATUS:
+        title: Marital status
+        hint-text: Marital status
+      NI_SSI_NUMBER:
+        title: NI SSI number
+        hint-text: NI SSI number
+      HOME_ADDRESS:
+        title: Home address
+        hint-text: Home address
+      CITY:
+        title: City
+        hint-text: City
+      POST_CODE:
+        title: Post code
+        hint-text: Post code
+      COUNTRY:
+        title: Country
+        hint-text: Country
+      TELEPHONE_NUMBER:
+        title: Telephone number
+        hint-text: Telephone number
+      EMAIL_ADDRESS:
+        title: Email address
+        hint-text: Email address
+      SORT_CODE:
+        title: Sort code
+        hint-text: Sort code
+      ACCOUNT_NUMBER:
+        title: Account number
+        hint-text: Account number
+      ROUTING_NUMBER:
+        title: Routing number
+        hint-text: Routing number
+      ACCOUNT_NAME:
+        title: Account name
+        hint-text: Account name
+      ACCOUNT_ADDRESS:
+        title: Account address
+        hint-text: Account address
+      IBAN:
+        title: IBAN
+        hint-text: IBAN
+      STATE:
+        title: STATE
+        hint-text: State
+      PREFERRED_NAME:
+        title: PREFERRED NAME
+        hint-text: Preferred Name
+  
+    pdf-answers-download:
+      # Message that user should wait for downloading files, will be combined with <link>
+      wait-message: We are preparing your files for download. To trigger download manually
+      # Link to be clicked
+      link: click here
+      # Message about closing the window after successful download
+      close-window: After successful download you can close the window.
+ 
