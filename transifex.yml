@@ -1,7 +1,7 @@
 git:
   filters:
     - filter_type: file
-      file_format: PO
+      file_format: YML
       source_language: en
-      source_file: config/locales/simple_form.en.yml
-      translation_files_expression: 'config/locales/simple_form.<lang>.yml'
+      source_file: source/source.yml
+      translation_files_expression: 'translations/translations.<lang>.yml'
