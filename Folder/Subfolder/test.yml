@@ -1,0 +1,11 @@
+profile:
+  test: 'null'
+  challege.create: 'Create profile challenge'
+  challenge:
+    generate: 'null'
+    limit: 'null'
+    store: 'null'
+    unknown: 'Invalid confirm string'
+  document:
+    create: 'Document has not been saved'
+    not_found: 'null'
