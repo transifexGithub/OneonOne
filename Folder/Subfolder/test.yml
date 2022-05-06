@@ -1,11 +1,6 @@
-profile:
-  test: 'null'
-  challege.create: 'Create profile challenge'
-  challenge:
-    generate: 'null'
-    limit: 'null'
-    store: 'null'
-    unknown: 'Invalid confirm string'
-  document:
-    create: 'Document has not been saved'
-    not_found: 'null'
+en:
+    key1: value1
+    # This is a comment for key2.
+    key2: value2
+    # non translatable integer value
+    key3: 123
