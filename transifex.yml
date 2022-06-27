@@ -5,7 +5,7 @@ git:
       source_file_extension: xlf
       source_language: en
       source_file_dir: client/src/locales
-      translation_files_expression: 'client/src/locales/<lang>.xlf'
+      translation_files_expression: 'client/src/locales/<lang>/<lang>.xlf'
       ignore_files: 
         - client/src/locales/en.xlf
         - client/src/locales/ar.xlf
