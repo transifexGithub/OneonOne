@@ -6,3 +6,6 @@ git:
       source_language: en
       source_file_dir: client/src/locales/
       translation_files_expression: 'client/src/locales/<lang>.xlf'
+      ignore_files: 
+        - client/src/locales/source.xlf
+        - client/src/locales/ar.xlf
