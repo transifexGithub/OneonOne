@@ -1,8 +1,8 @@
 git:
   filters:
     - filter_type: dir
-      file_format: XLIFF
-      source_file_extension: xlf
+      file_format: strings
+      source_file_extension: strings
       source_language: en
       source_file_dir: client/src/locales/
       translation_files_expression: client/src/locales/<lang>/
